@@ -74,19 +74,30 @@ body {
   line-height: 122.69%;
   letter-spacing: 0.015em;
   color: #f9fbff;
+  text-align: center;
 }
 form p{
   width: 150%;
   font-family: Poppins;
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   color: #121147;
 font-weight: 400;
 line-height: 21px;
 letter-spacing: 0.015em;
-text-align: right;
+text-align: left
 /* border: 2px solid red; */
 }
 
+.b{
+  width: 150%;
+  font-family: Poppins;
+  font-size: 1.0rem;
+  color: #121147;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0.015em;
+text-align: right
+}
 
 .header2 h2{
   width: 50%;
