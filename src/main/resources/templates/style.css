@@ -1,0 +1,111 @@
+.body{
+    font-family: "Poppins";
+  }
+  .LogIn-wrapper{
+    position: absolute;
+    width: 107px;
+    height: 43px;
+    left: 800px;
+    top: 77px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 122.69%;
+    /* identical to box height, or 43px */
+    
+    letter-spacing: 0.015em;
+    
+    color: #121147;
+    
+  }
+  @media (min-width: 500px) {
+    .LogIn-wrapper{
+      flex: 50%;
+    }
+  }
+  
+  .h1{
+    position: relative;
+   width: 289px;
+  height: 43px;
+  left: 645px;
+  top: 325px; 
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 122.69%;
+  
+  letter-spacing: 0.015em;
+  
+  color: #121147;
+    }
+  
+  
+  .button{
+    position: relative;
+   width: 547px;
+  height: 51px;
+  left: 640px;
+  top: 340px; 
+  
+  margin-top: 40px;
+  
+  background: #121147;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 122.69%;
+  
+  letter-spacing: 0.015em;
+  color: #F9FBFF;
+  }
+  
+  .input{
+    position: relative;
+    left: 650px;
+    top: 320px;
+    border: none;
+      border-bottom: 1px solid 
+      #121147;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+  }
+  
+  .p{
+    position: relative;
+  width: 285px;
+  height: 21px;
+  left: 641px;
+  top: 350px;
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 122.69%;
+  
+  
+  letter-spacing: 0.015em;
+  
+  color: rgba(0, 0, 0, 0.58);
+  
+  }
+  .a{
+    left: 641px;
+    top: 507px;
+  }
+  
+  .b{
+    left: 641px;
+    right: 50px; 
+    top: 507px;
+  }
