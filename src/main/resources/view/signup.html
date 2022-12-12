@@ -7,6 +7,7 @@
     <meta name="google-signin-client_id" content="407054153706-enhsit4msbriahvhumvvrrgfbv5hqni5.apps.googleusercontent.com">
 
     <title>signuppage</title>
+    <script src="../static/javascript/signup.js"> </script>
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
   <body>
@@ -47,9 +48,9 @@
             <div class="formcontrol">
               <!-- <label1 class ="text" for="Name">Full Name</label> -->
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="floatingInput"
+                id="s-name"
                 placeholder="Full Name"
               />
             </div>
@@ -57,33 +58,34 @@
 
             <div class="formcontrol">
               <!-- <label2 class ="text" for="Email">Email Address</label> -->
-              <input type="text" name="email" placeholder="Email" />
+              <input type="text" name="email" placeholder="Email" id="s-email"/>
             </div>
 
             <div class="formcontrol">
               <!-- <label3 class ="text">Address</label> -->
-              <input type="text" name="Address" placeholder="Address" />
+              <input type="text" name="Address" placeholder="Address" id="s-address" />
             </div>
 
-            <div class="formcontrol">
+            <div class="formcontrol" >
               <!-- <label4 class ="text" for="Phone number">Phone Number</label> -->
               <input
                 type="number"
                 name="Phone number"
                 placeholder="Phone Number"
                 maxlength="10"
+                id="s-phone"
               />
             </div>
 
             <div class="formcontrol">
               <!-- <label5 for="Password">Password</label> -->
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" id="s-password" />
               <!-- <label6 for="Confirm password">Confirm Password</label> -->
-              <input type="password" placeholder="Confirm Password" />
+              <input type="password" placeholder="Confirm Password" id="s-confirm-password"/>
             </div>
           </div>
 
-          <button class="summitbutton" type="button" name="Summit">
+          <button class="summitbutton" type="button" name="Summit" onclick="validateSignup()">
             Create Account
           </button>
 
