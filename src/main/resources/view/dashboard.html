@@ -18,15 +18,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewBox" content="width=device-width,initial-scale=1.0" />
-    <title>DashBoard</title>
+    <title>Dash</title>
     <link rel="stylesheet" href="../static/CSS/dashboard.css" />
   </head>
-  <body
-    style="
-      background-color: #121147;
-      font-family: 'Times New Roman', Times, serif;
-    "
-  >
+  <body>
     <div class="flex-top">
       <div class="logo_box">
         <img src="logo.png" class="logo" alt="img" />
@@ -37,20 +32,19 @@
           role="group"
           aria-label="Button group with nested dropdown"
         >
-          <button type="button" style="color: azure" class="btn btn">
+          <button type="button"  class="btn btn">
             Broadcast
           </button>
-          <button type="button" style="color: azure" class="btn btn">
+          <button type="button"  class="btn btn">
             Subscribers
           </button>
-          <button type="button" style="color: azure" class="btn btn">
+          <button type="button"  class="btn btn">
             Learn
           </button>
 
           <div class="btn-group" role="group">
             <button
               type="button"
-              style="color: azure"
               class="btn btn dropdown-toggle"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -83,83 +77,77 @@
     </div>
     <div
       class="line"
-      style="
-        background-color: aliceblue;
-        width: 180%;
-        height: 2px;
-        margin-left: 10%;
-        margin-right: 10%;
-      "
+
     >
       
     </div>
 
-    <p class="fw-bold" style="color: azure">Channel Analytics</p>
+    <p class="fw-bold">
+        Channel Analytics
+    </p>
 
     <div class="flex-center">
       <div class="flex-box">
-        <p class="fs-6" style="color: black">Emails Sent</p>
+        <p class="fs-4" >Emails Sent</p>
       </div>
       <div class="flex-box">
-        <p class="fs-6" style="color: black">Subscribers</p>
+        <p class="fs-4" >Subscribers</p>
       </div>
       <div class="flex-box">
-        <p class="fs-6" style="color: black">Growth</p>
-      </div>
-    </div>
-    <div class="flex-right">
-      <div class="d-grid gap-2">
-        <button class="btn btn-light" style="width: 230%" type="button">
-          Subscribers
-        </button>
-        <button class="btn btn-light" style="width: 230%" type="button">
-          Emails Sent
-        </button>
+        <p class="fs-4" >Growth</p>
       </div>
     </div>
 
-    <div
-      class="flex-graph"
-      style="
-        background-color: aliceblue;
-        width: 100%;
-        height: 25rem;
-        margin-left: 20%;
-        margin-bottom: 20%;
-        border-radius: 30px;
-        padding: 5%;
-      "
-    >
-    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
-<script>
-var xValues = [100,200,300,400,500,600,700,800,900,1000];
+    <div class="flex_main">
+        <div class="flex-graph"
 
-new Chart("myChart", {
-  type: "line",
-  data: {
-    labels: xValues,
-    datasets: [{ 
-      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-      borderColor: "red",
-      fill: false
-    }, { 
-        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-        borderColor: "green",
-        fill: false
-      }, { 
-        data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-        borderColor: "blue",
-        fill: false
-      }]
-  },
-  options: {
-    legend: {display: false}
-  }
-});
-</script>
+        >
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+            <script>
+                var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+            new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+                }, { 
+                    data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                    borderColor: "green",
+                    fill: false
+                }, { 
+                    data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                    borderColor: "blue",
+                    fill: false
+                }]
+            },
+            options: {
+                legend: {display: false}
+            }
+            });
+            </script>
   
-  </div>
+        </div>
+        <div class="flex-right">
+            <div class="d-grid gap-2">
+            <button class="btn btn-light" type="button">
+                Subscribers
+             </button>
+            
+            <button class="btn btn-light" type="button">
+                 Emails Sent
+            </button>
+            
+            </div>
+        </div>
+
+
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
