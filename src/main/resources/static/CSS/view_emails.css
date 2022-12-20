@@ -1,12 +1,14 @@
 @font-face {
     font-family: 'outfit';
-    src: url(Outfit-VariableFont_wght.ttf);
+    src: url(../font/Outfit-VariableFont_wght.ttf);
   }
   
   body {
   
     width: 50%;
     height: 50%;
+    background-color:#121147; 
+    font-family: 'outfit';
   
   }
   
@@ -28,6 +30,7 @@
   font-size: 5rem;
   font-weight: 00;
   font-family: 'outfit';
+  color: azure; 
   }
   .line{
     background-color: aliceblue; 
@@ -36,46 +39,63 @@
     margin-left: 10%; 
     margin-right: 10%;
   }
+  .btn{
+    color: azure; 
+    height: 3rem;
+    width: 20rem;
+  }
   .btn-group{
       background-color: #121147;
-  
-      
+      color: azure; 
+      width: 35%;
     }
-  
+    .btn-light{
+        color: black;
+    }
+  .new{
+    margin-left: 10%;
+  }
   .flex-top{
       display: flex;
      
       
   }
+  .fw-bold{
+    color: white;
+    font-size: 300%;
+    margin-left: 22%;
+  }
   .Head_Buttons{
     display: flex;
-    margin-top: 5%;
-    margin-left: 60%;
+    margin-top: 0%;
+    margin-left: 22%;
     font-family: 'outfit';
-    width: 100%;
+    width: 155%;
   }
 .btn-light{
   margin-left: 1%;
 }
+
+.search_bar{
+    align-items: center;
+    margin-left: 75%;
+    margin-top: 2%;
+}
+.me-2{
+    border-style: double;
+}
+
 .Center_flex{
   display: flex;
-
-}
-.d-flex{
-  flex-direction: row-reverse;
-}
-
-.Center_flex{
   background-color: aliceblue;
   width: 160%;
-  height:30rem;
+  height:50rem;
   margin-top: 5%;
   margin-left:20%;
   margin-bottom:20% ;
   border-radius: 30px;
 }
 
-  
 
 
   
