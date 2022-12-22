@@ -3,12 +3,13 @@ package com.managepoint.managepoint.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User {
     @Id
     @SequenceGenerator(name = "mp_user_seq_gen", sequenceName = "mp_user_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "mp_user_seq_gen", strategy = GenerationType.SEQUENCE)
-    private Integer uId;
+    @Column(name="u_id")
+    private Integer id;
 
     @Column(name="u_name",nullable = false)
     private String name;
