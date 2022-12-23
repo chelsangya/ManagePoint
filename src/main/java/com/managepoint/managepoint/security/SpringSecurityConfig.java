@@ -10,22 +10,22 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 
 public class SpringSecurityConfig {
-//    @Bean
-//    protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-//        httpSecurity.csrf().disable()
-//                .authorizeHttpRequests()
-//                .requestMatchers("/login", "/user/**")
-//                .permitAll()
-//                .anyRequest()
-//                .authenticated()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login")
-//                .defaultSuccessUrl("/dashboard", true)
-//                .usernameParameter("email")
-//                .permitAll()
-//                .and()
-//                .httpBasic();
-//        return httpSecurity.build();
-//    }
+    @Bean
+    protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.csrf().disable()
+                .authorizeHttpRequests()
+                .requestMatchers("/login", "/user/**")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/dashboard", true)
+                .usernameParameter("email")
+                .permitAll()
+                .and()
+                .httpBasic();
+        return httpSecurity.build();
+    }
 }
