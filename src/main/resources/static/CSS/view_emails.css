@@ -46,17 +46,17 @@
     color: azure; 
     height: 3rem;
     width: 180%;
-    border: #121147;
+    /* border: #121147; */
   }
   .btn-group{
       background-color: #121147;
       color: azure; 
       width: 95%;
-      border: #121147;
+      border-color: #121147;
     }
-    .btn-light{
-        color: black;
-        border: #121147;
+  .btn-light{
+      color: black;
+      border-color: white;
     }
   .new{
     margin-left: 30%;
@@ -84,11 +84,11 @@
 }
 
 .search_bar{
-    align-items: center;
-    margin-right: 5%;
+    margin-left: 78%;
     margin-top: 2%;
-    align-items: flex-end;
-    width: 50%;
+    width: 18%;
+    height:1%;
+
 }
 .me-2{
     border-style: double;
@@ -113,13 +113,14 @@
 }
 
 .broadcasts{
-  margin-top: 1%;
-  margin-left: 1%;
+  margin-top: 3%;
+  margin-left: -95%;
+  width: 45%;
   font-size: x-large;
 
 }
 .Edit{
-  margin-top: -9%;
+  margin-top: -7%;
   width: 10%;
   margin-left: 70%;
   
@@ -127,6 +128,10 @@
 .text-decoration-none{
   color: black;
 
+
+}
+.btn-outline-light{
+  border-color: white;
 }
 
   
