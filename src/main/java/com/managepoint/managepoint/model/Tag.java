@@ -3,13 +3,15 @@ package com.managepoint.managepoint.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="tags")
+@Table(name="tag")
 public class Tag {
     @Id
-    @SequenceGenerator(name = "mp_user_seq_gen", sequenceName = "mp_user_id_seq", allocationSize = 1)
-    @GeneratedValue(generator = "mp_user_seq_gen", strategy = GenerationType.SEQUENCE)
-    private Integer id;
-    @Column(nullable = false)
-    private String name;
+    @SequenceGenerator(name = "tag_id_seq_gen", sequenceName = "tag_tag_id_seq", allocationSize = 1)
+    @GeneratedValue(generator = "tag_id_seq_gen", strategy = GenerationType.SEQUENCE)
+    @Column(name = "t_id")
+    private Integer t_id;
+    @Column(name="t_name",nullable = false)
+    private String t_name;
+
 
 }
