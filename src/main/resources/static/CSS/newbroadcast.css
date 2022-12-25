@@ -61,7 +61,11 @@ h1 {
 }
 
 input {
-    display: none;
+    /*display: none;*/
+    padding: 2%;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
 }
 label {
     display: inline-block;

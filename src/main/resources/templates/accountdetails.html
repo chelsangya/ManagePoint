@@ -13,8 +13,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/CSS/accountdetail.css}">
   </head>
   <body>
-  <header th:replace="fragments/navbar :: navbar"
-          th:with="profileName=${name}"/>
+  <header th:replace="~{/fragments/navbar.html}"></header>
     <section id="body">
       <div class="left">
         <a th:href="@{~/dashboard/profile}">

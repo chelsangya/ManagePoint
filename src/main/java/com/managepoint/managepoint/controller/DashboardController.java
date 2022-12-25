@@ -38,6 +38,12 @@ public class DashboardController {
 
         return "broadcast";
     }
+    @GetMapping("")
+    public  String getDashboard(Model model){
+//        Optional<User> user = userService.getCurrentUser();
+//        model.addAttribute("profileName", user.get().getName());
+        return "analytics";
+    }
     @GetMapping("/broadcast/new")
     public String newBroadcast() {
 
@@ -61,7 +67,7 @@ public class DashboardController {
     @GetMapping("/profile")
     public String getUserProfile (Integer id,Model model, Principal principal) {
         model.addAttribute("update", new UserPojo());
-        model.addAttribute("info",userService.findByEmail(principal.getName()));
+        model.addAttribute("info", userService.findByEmail(principal.getName()));
         return "accountdetails";
     }
     @PostMapping("/profile/update")
@@ -70,6 +76,12 @@ public class DashboardController {
         return "redirect:/dashboard";
     }
     @GetMapping("/notification")
-    public String getNotification(){return "notification";}
+    public String getNotification(){return "notification";
+    }
+
+    @GetMapping("/newsletter")
+    public String getNewsletter(){
+        return "newsletter";
+    }
 
 }

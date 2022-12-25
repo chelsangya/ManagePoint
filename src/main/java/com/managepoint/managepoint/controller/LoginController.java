@@ -23,12 +23,7 @@ public class LoginController {
     @GetMapping("/index")
     public String getIndex(){return "index";}
 
-    @GetMapping("/dashboard")
-    public  String getDashboard(Model model){
-//        Optional<User> user = userService.getCurrentUser();
-//        model.addAttribute("profileName", user.get().getName());
-        return "analytics";
-    }
+
     @GetMapping("/login")
     public String showLoginPage() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
