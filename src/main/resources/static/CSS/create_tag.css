@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'outfit';
+    src: url(../font/Outfit-VariableFont_wght.ttf);
+  }
+  
+  body {
+  
+    width: 50%;
+    height: 50%;
+    background-color:#121147; 
+    font-family: 'outfit';
+  
+  }
+.main{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding: 5%;
+}
+.fw-bold{
+    font-size: xx-large;
+}
+.btn-outline-light{
+    background-color: #121147;
+}
+.btn-light{
+    border-color: #121147;
+}
