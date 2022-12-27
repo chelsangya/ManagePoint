@@ -1,0 +1,11 @@
+:root {
+  --primary: #121147;
+  --secondary: #ebdfdf;
+}
+.newsletter-container {
+  background-color: var(--primary);
+  min-height: 100vh;
+  color: var(--secondary);
+  padding-bottom: 3%;
+}
+
