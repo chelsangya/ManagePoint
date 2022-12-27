@@ -8,4 +8,9 @@
   color: var(--secondary);
   padding-bottom: 3%;
 }
-
+h1 {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 3rem;
+  padding: 2% 0;
+}
