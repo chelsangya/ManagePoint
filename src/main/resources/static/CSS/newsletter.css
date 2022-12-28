@@ -14,3 +14,20 @@ h1 {
   font-size: 3rem;
   padding: 2% 0;
 }
+
+.individual-container {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-start;
+  /* border: 5px solid var(--secondary); */
+  border-bottom: 4px solid var(--secondary);
+  margin: 4%;
+  flex-wrap: wrap;
+  padding: 3%;
+}
+.individual-container:hover {
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.35) 5px 5px 20px 5px;
+  background-color: #1e1e4778;
+}
