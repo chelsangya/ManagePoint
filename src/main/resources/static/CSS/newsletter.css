@@ -31,3 +31,22 @@ h1 {
   box-shadow: rgba(255, 255, 255, 0.35) 5px 5px 20px 5px;
   background-color: #1e1e4778;
 }
+.individual-container img {
+  width: 20%;
+  height: auto;
+  border-radius: 30px;
+}
+/* text portion */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  margin-right: 20px;
+  width: 70%;
+}
+.section h2 {
+  font-size: 2rem;
+}
