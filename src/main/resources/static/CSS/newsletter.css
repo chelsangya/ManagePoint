@@ -50,3 +50,53 @@ h1 {
 .section h2 {
   font-size: 2rem;
 }
+.readmore {
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+
+  transition: max-height 0.15s ease-out;
+}
+
+.readmore.expand {
+  max-height: 5000px !important;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.readmore-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 40px;
+  background-color: var(--secondary);
+  padding: 1%;
+  border-radius: 10px;
+  color: var(--primary);
+  cursor: pointer;
+}
+.readmore-link:hover {
+  background-color: rgba(239, 228, 214, 0.907);
+  border: var(--primary);
+  transition: 0.3s ease-in;
+}
+
+.readmore-link.expand {
+  position: relative;
+  margin-top: 2%;
+}
+
+.readmore-link:after {
+  content: "Read more";
+}
+.readmore-link.expand:after {
+  content: "Read less";
+  width: 30%;
+}
