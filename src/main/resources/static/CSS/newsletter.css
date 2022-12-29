@@ -100,3 +100,12 @@ h1 {
   content: "Read less";
   width: 30%;
 }
+/* responsive */
+@media (max-width: 600px) {
+  .individual-container img {
+    width: 80%;
+  }
+  .individual-container .section {
+    width: 100%;
+  }
+}
