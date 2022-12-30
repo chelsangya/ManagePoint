@@ -4,23 +4,19 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Getter
 @Setter
-public class Email_Subscriber {
+public class Subscriber_Tag {
     @EmbeddedId
-    Email_Subscriber_Id emailSubscriberId;
+    Subscriber_Tag_Id subscriberTagId;
 
     @ManyToOne
-    @MapsId("e_id")
-    @JoinColumn(name="fk_e_id",nullable=false)
-    private Email email;
+    @MapsId("t_id")
+    @JoinColumn(name="fk_t_id",nullable=false)
+    private Tag tag;
     @ManyToOne
     @MapsId("s_id")
     @JoinColumn(name="fk_s_id",nullable=false)
     private Subscriber subscriber;
-   @Column(name="es_date",nullable = false)
-    private LocalDateTime es_date;
 }
