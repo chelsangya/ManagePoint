@@ -85,3 +85,20 @@ font-family: 'outfit';
   font-size: xxx-large;
   font-family: 'outfit';
 }
+
+
+.flex-bottom-left{
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 44px;
+  
+}
+
+
+.sub-count{
+  color: white;
+}
+
+.flex-bottom-right{
+  display: flex;
+}

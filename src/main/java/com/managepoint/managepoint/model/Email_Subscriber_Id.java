@@ -17,3 +17,11 @@ public class Email_Subscriber_Id implements Serializable {
     @Column(name="e_id")
     private Integer e_id;
 }
+
+
+
+
+
+
+
+
