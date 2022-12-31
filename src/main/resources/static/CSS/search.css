@@ -1,0 +1,28 @@
+.search-area{
+    background: #282c3f;
+    padding: 20px;
+    }
+    .search-box{
+    display: flex;
+    width: 40%;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    }
+    .search-box .form-control{
+    width:100%;
+    border: 0;
+    height: 36px;
+    padding:0 10px;
+    outline: 0;
+    }
+    .search-box .btn{
+    background: #fff;
+    border:1px solid #000;
+    height: 36px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    }
