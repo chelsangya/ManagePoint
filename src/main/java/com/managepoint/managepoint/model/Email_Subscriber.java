@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class Email_Subscriber {
     @EmbeddedId
     Email_Subscriber_Id emailSubscriberId;
+
     @ManyToOne
     @MapsId("e_id")
     @JoinColumn(name="fk_e_id",nullable=false)
