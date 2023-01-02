@@ -1,0 +1,115 @@
+body {
+  background-color: #121147;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 5% 2% 5%;
+  border-bottom: 1px solid aliceblue;
+}
+
+nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/* ==========body====== */
+#body {
+  display: flex;
+  padding: 5% 0% 0% 0%;
+  justify-content: space-around;
+}
+
+.left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+}
+
+.left a {
+  border-radius: 5px;
+  background-color: aliceblue;
+  color: #121147;
+  width: 100%;
+  padding: 5%;
+  text-decoration: none;
+}
+
+.left a:hover {
+  background-color: #121147;
+  border: 3px solid aliceblue;
+  color: aliceblue;
+  transition: 0.2s ease-in;
+}
+
+
+
+.right {
+  background: aliceblue;
+  border-radius: 20px;
+  width: 60%;
+  padding: 3%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.right p,
+p span,
+h1,
+span,
+h6 {
+  background-color: aliceblue;
+}
+
+h1,
+p span {
+  background-color: aliceblue;
+}
+
+.right p {
+  display: flex;
+  justify-content: flex-start;
+}
+
+p input {
+  margin-right: 2%;
+}
+
+p span {
+  margin-left: 3%;
+  border-left: 3px solid gray;
+  padding-left: 2%;
+}
+
+.right button {
+  background-color: #121147;
+  border-radius: 4%;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: aliceblue;
+  padding: 2%;
+}
+
+.bottom-btn {
+  display: flex;
+  justify-content: end;
+
+}
+.bottom-btn button{
+margin-left: 3%;
+border-radius: 30%;
+}
