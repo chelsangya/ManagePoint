@@ -1,4 +1,4 @@
-package com.emailcodes.emaildemo;
+package com.managepoint.managepoint.emaildemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
