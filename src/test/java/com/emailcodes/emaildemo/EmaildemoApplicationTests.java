@@ -1,10 +1,10 @@
-package com.managepoint.managepoint;
+package com.emailcodes.emaildemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ManagepointApplicationTests {
+class EmaildemoApplicationTests {
 
 	@Test
 	void contextLoads() {
