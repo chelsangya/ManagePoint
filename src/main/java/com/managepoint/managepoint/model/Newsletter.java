@@ -13,7 +13,7 @@ public class Newsletter {
     @SequenceGenerator(name = "newsletter_id_seq_gen", sequenceName = "newsletter_email_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "newsletter_id_seq_gen", strategy = GenerationType.SEQUENCE)
     @Column(name="n_id")
-    private Integer n_Id;
+    private Integer n_id;
     @Column(name="n_title")
     private String n_title;
     @Column(name = "n_content",nullable = false)

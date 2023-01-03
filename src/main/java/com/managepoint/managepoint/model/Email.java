@@ -13,7 +13,7 @@ public class Email {
     @SequenceGenerator(name = "email_id_seq_gen", sequenceName = "email_email_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "email_id_seq_gen", strategy = GenerationType.SEQUENCE)
     @Column(name="e_id")
-    private Integer e_Id;
+    private Integer e_id;
     @Column(name="e_title")
     private String e_title;
     @Column(name = "e_content",nullable = false)
