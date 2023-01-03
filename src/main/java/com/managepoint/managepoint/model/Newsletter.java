@@ -18,6 +18,8 @@ public class Newsletter {
     private String n_title;
     @Column(name = "n_content",nullable = false)
     private String n_content;
+    @Column(name="n_image")
+    private String n_image;
     @ManyToOne
     @JoinColumn(name="ne_id",nullable=false)
     private User user;

@@ -24,6 +24,7 @@ public class UserPojo {
     private String u_address;
     @NotEmpty(message = "Password can't be empty")
     private String u_password;
+    @NotEmpty(message="Image cannot be empty")
     private String u_image;
     public UserPojo(User user){
         this.u_id=user.getU_id();

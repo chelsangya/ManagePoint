@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -22,5 +23,5 @@ public class Email_Subscriber {
     @JoinColumn(name="fk_s_id",nullable=false)
     private Subscriber subscriber;
    @Column(name="es_date",nullable = false)
-    private LocalDateTime es_date;
+    private Date es_date;
 }
