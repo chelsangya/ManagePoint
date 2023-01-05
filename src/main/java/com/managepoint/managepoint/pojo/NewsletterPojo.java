@@ -1,8 +1,7 @@
 package com.managepoint.managepoint.pojo;
 
-import com.managepoint.managepoint.model.Newsletter;
-import com.managepoint.managepoint.model.User;
-import jakarta.validation.constraints.NotEmpty;
+import com.managepoint.managepoint.entity.Newsletter;
+import javax.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,0 +1,24 @@
+package com.managepoint.managepoint.pojo;
+
+import lombok.*;
+
+import javax.validation.constraints.NotEmpty;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PasswordChangePojo {
+
+    private String email;
+
+    @NotEmpty(message = "Old Password can't be empty")
+    private String oldPassword;
+
+    @NotEmpty(message = "New Password can't be empty")
+    private String newPassword;
+
+    @NotEmpty(message = "Repeat Password can't be empty")
+    private String repeatPassword;
+}

@@ -1,4 +1,4 @@
-package com.managepoint.managepoint.model;
+package com.managepoint.managepoint.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

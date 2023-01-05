@@ -1,0 +1,113 @@
+/* =========setting up the variables=========== */
+:root{
+    --primary: #121147;
+    --secondary:#fff;
+    --third:#000;
+    --light-black:#3e3c3c;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* ======left sude============= */
+#left{
+    background-color: var(--primary);
+    color: var(--secondary);
+    clip-path: polygon(0 0, 100% 0%, 87% 100%, 0% 100%);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+}
+#left h1{
+    font-size: 4rem;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+/* ======left side completed======== */
+/* ======right side ======== */
+#right{
+    width: 50%;
+    padding: 3%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#right h1{
+    font-size: 3rem;
+    color: var(--primary);
+    font-weight: bolder;
+}
+#right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+/* ---- for login page form ---- */
+#right #loginform{
+    height: 20%;
+}
+/* ---login page form managed---- */
+
+input{
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
+    height:15%;
+    font-size: 1.4rem;
+    padding: 2%;
+}
+form span{
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+span input{
+    height: 100%;
+    width: 48%;
+}
+::placeholder{
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+button{
+    color: var(--secondary);
+    background-color: var(--primary);
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding: 2%;
+}
+p{
+    color: var(--light-black);
+    font-size: 1.2rem;
+}
+h6{
+    text-align: center;
+}
+.googlesignin div{
+    margin: auto;
+    width: 50%;
+}
+/* ==========responsive============= */
+@media only screen and (max-width: 600px) {
+    body {
+        flex-wrap: wrap;
+    }
+    #left , #right{
+        width: 100%;
+    }
+    #left{
+        height: 50vh;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+    }
+}

@@ -8,18 +8,18 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
- public class SpringEmailDemoApplication {
+ public class ManagepointApplication {
 
     @Autowired
     private EmailSenderService senderService;
     public static void main(String[] args) {
-        SpringApplication.run(SpringEmailDemoApplication.class, args);
+        SpringApplication.run(ManagepointApplication.class, args);
     }
-    @EventListener(ApplicationReadyEvent.class)
-    public void sendEMail(){
-        senderService.sendSimpleEmail("csangya@gmail.com",
-                "This is email body",
-                "This is email subject");
-
-    }
+//    @EventListener(ApplicationReadyEvent.class)
+//    public void sendEMail(){
+//        senderService.sendSimpleEmail("csangya@gmail.com",
+//                "This is email body",
+//                "This is email subject");
+//
+//    }
 }

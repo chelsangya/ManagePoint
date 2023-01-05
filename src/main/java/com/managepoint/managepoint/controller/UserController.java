@@ -2,7 +2,7 @@ package com.managepoint.managepoint.controller;
 
 
 import com.managepoint.managepoint.exception.AppException;
-import com.managepoint.managepoint.model.User;
+import com.managepoint.managepoint.entity.User;
 import com.managepoint.managepoint.pojo.UserPojo;
 import com.managepoint.managepoint.service.impl.UserService;
 import jakarta.validation.Valid;
@@ -49,8 +49,6 @@ public class UserController extends BaseController {
         } finally {
             return "redirect:/user";
         }
-
-
     }
 
     @PostMapping("/save")
@@ -63,6 +61,6 @@ public class UserController extends BaseController {
     public String editUser(@PathVariable("id") Integer id, Model model){
         User user= userService.fetchById(id);
         model.addAttribute("user",new UserPojo(user));
-        return "register";
+        return "signup";
     }
 }
