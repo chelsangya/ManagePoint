@@ -1,0 +1,40 @@
+:root{
+    --primary: #121147;
+    --secondary:#fff;
+    --third:#000;
+}
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    background: var(--primary);
+}
+.upper-btns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    padding: 0% 2%;
+}
+.upper-btns button{
+    padding: 1%;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin: 2% 0%;
+}
+i{
+    color: var(--primary);
+    margin-right: 2px;
+    font-size: 1.5rem;
+    background: var(--secondary);
+}
+.display-area{
+    width: 90%;
+    min-height: 50vh;
+    background: var(--secondary);
+    margin: 3%;
+    border-radius: 10px;
+
+}
