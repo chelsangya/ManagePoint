@@ -70,13 +70,13 @@
     <div class="footer_link">
         <h3>Links</h3>
 
-        <a href="#">Home</a>
+        <a th:href="@{#}">Home</a>
 
-        <a href="#">Service</a>
+        <a th:href="@{#}">Service</a>
 
-        <a href="#">Feature</a>
+        <a th:href="@{#}">Feature</a>
 
-        <a href="#">Contacts</a>
+        <a th:href="@{#}">Contacts</a>
     </div>
 
     <div class="column_footer">
@@ -90,10 +90,10 @@
             <i class="fa-brands fa-whatsapp"></i>
         </div>
 
-        <img src="../static/images/logo.png" alt="" />
+        <img th:src="@{/images/logo.png}" alt="" />
     </div>
 </footer>
 </body>
-<script src="../static/javascript/script.js"></script>
+<script th:src="@{/javascript/script.js}"></script>
 
 </html>
