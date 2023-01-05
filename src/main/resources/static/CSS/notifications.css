@@ -2,24 +2,6 @@ body {
   background-color: #121147;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0% 5% 2% 5%;
-  border-bottom: 1px solid aliceblue;
-}
-
-nav {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav a {
-  color: aliceblue;
-  text-decoration: none;
-}
 
 /* ==========body====== */
 #body {
@@ -110,6 +92,6 @@ p span {
 
 }
 .bottom-btn button{
-margin-left: 3%;
-border-radius: 30%;
+  margin-left: 3%;
+  border-radius: 30%;
 }

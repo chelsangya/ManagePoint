@@ -1,138 +1,38 @@
-@font-face {
-  font-family: 'outfit';
-  src: url(../font/Outfit-VariableFont_wght.ttf);
-}
-body {
-
-  width: 50%;
-  height: 50%;
-  font-family: 'outfit';
-  background-color: #121147;
-
+:root {
+    --primary: #121147;
+    --secondary: #ebdfdf;
 }
 
-.logo_box {
-    width: 50%;
-    height: 50%;
+.upper-part{
     padding: 3%;
-    margin-right: 90%;
+    background-color: var(--primary);
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    align-content: center;
-  }
-.nav_box{
-margin-top: 1%;
-background-color: #121147;
-font-size: 5rem;
-font-weight: 00;
-
-font-family: 'outfit';
 }
-.btn{
-  color: azure
-}
-.btn-group{
-    background-color: #121147;
-    font-family: 'outfit';
-    color: azure
-
-  }
-.line{
-  background-color: aliceblue;
-  width: 180%;
-  height: 2px;
-  margin-left: 10%;
-  margin-right: 10%;
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.flex-top{
-    display: flex;
-
-}
-.flex-center{
-width: 150%;
-height: 100%;
-display: flex;
-}
-.flex-box{
-width: 60%;
-height: 130px;
-padding: 0.5%;
-border-radius: 10px;
-background: #ffff;
-margin-left: 10%;
-font-family: 'outfit';
-}
-.flex-right{
-  margin-top: 5%;
-  margin-left: 5%;
-  width: 15%;
-  display: flex;
-  font-family: 'outfit';
-
-
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
-.fw-bold{
-  width: 80%;
-  color: azure;
-  font-display: #ffff;
-  font-family: 'Outfit';
-  margin-left: 14%;
-  font-size: xxx-large;
-  font-family: 'outfit';
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-
-.flex-below{
-  display: flex;
+#customers tr:hover {
+    background-color: #ddd;
 }
 
-.flex-bottom-left{
-  display: flex;
-  background: #FFFFFF;
-  border-radius: 44px;
-  position: absolute;
-  width: 50%;
-  height: 70%;
-  margin-top: 3%;
-  margin-left: 3%;
-  background: #FFFFFF;
-  border-radius: 44px;
-  
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
 }
-
-
-.sub-count{
-  color: white;
-  font-size: 150%;
-}
-
-.flex-bottom-right{
-  display: flex;
-}
-
-.addsub{
-  width: 40%;
-  height: 60%;
-  background: #121147;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  font-family: 'Alata';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 28px;
-  color: #FFFFFF;
-
-
-}
-
-.button2{
-
-}
-

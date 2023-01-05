@@ -1,117 +1,149 @@
-@font-face {
-  font-family: 'outfit';
-  src: url(../font/Outfit-VariableFont_wght.ttf);
+/* setting up the variables */
+:root {
+    --primary: #121147;
+    --secondary: #ebdfdf;
 }
 body {
-  
-  width: 50%;
-  height: 50%;
-  font-family: 'outfit';
-  background-color: #121147;
-  
+    color: var(--secondary);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--primary);
+    padding: 3%;
+}
+.logo{
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3rem;
+    min-width: 30%;
+}
+.logo img{
+    margin-right: 2%;
+}
+.links {
+    min-width: 40%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.logo_box {
-    width: 50%;
-    height: 50%;
+.links a {
+    font-size: 1.3rem;
+    margin: 2%;
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 400;
     padding: 3%;
-    margin-right: 90%;
+
+}
+.links a:hover {
+    border: 1px solid var(--secondary);
+    border-radius: 7px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    transition: 0.2s ease-in-out;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--secondary);
+    border: 0.1rem solid var(--secondary);
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem;
+    display: none;
+}
+.main {
+    background: var(--primary);
+    min-height: 70vh;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+}
+.main h2 {
+    font-size: 4rem;
+    width: 50%;
+    margin-left: auto;
+    align-self: center;
+}
+.main2 {
+    display: flex;
+    padding: 3%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.main2 h2 {
+    color: black;
+    font-size: 3rem;
+    width: 45%;
+}
+iframe{
+    /* border: 5px solid var(--primary); */
+    border-radius: 18px;
+    box-shadow: var(--primary) 5px 5px;
+    width: 45%;
+    height: 45vh;
+}
+iframe:hover{
+    border: none;
+    box-shadow: none;
+    transition: 0.9s ease-in-out;
+}
+/* =========footer started======= */
+footer {
+    background: var(--primary);
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.column_footer {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer_link {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: center;
-  }
-.nav_box{
-margin-top: 1%;
-background-color: #121147;
-font-size: 5rem;
-font-weight: 00;
-
-font-family: 'outfit';
+    width: 20%;
 }
-.btn{
-  color: azure
-}
-.btn-group{
-    background-color: #121147;
-    font-family: 'outfit';
-    color: azure
-    
-  }
-.line{
-  background-color: aliceblue;
-  width: 180%;
-  height: 2px;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.flex-top{
+.column_footer .social_media {
     display: flex;
-    
+    flex-direction: column;
+    justify-content: space-around;
 }
-.flex-center{
-width: 150%;
-height: 100%;
-display: flex;
-}
-.flex-box{
-width: 60%;
-height: 130px;
-padding: 0.5%;
-border-radius: 10px;
-background: #ffff;
-margin-left: 10%;
-font-family: 'outfit';
-}
-.flex-right{
-  margin-top: 5%;
-  margin-left: 5%;
-  width: 15%;
-  display: flex;
-  font-family: 'outfit';
-  
-  
-}
-
-.fw-bold{
-  width: 80%;
-  color: azure;
-  font-display: #ffff;
-  font-family: 'Outfit';
-  margin-left: 14%;
-  font-size: xxx-large;
-  font-family: 'outfit';
-}
-.fs-4{
-  color: black;
-}
-.flex_main{
-  display: flex;
-  width: 190%;
- margin-bottom: 5%;
-
-}
-.gap-2{
-  width: 230%;
-  height: 30%;
-}
-.btn-light{
-  color: black;
+.column_footer img {
+    width: 50px;
+    height: 50px;
 }
 
 
-.flex-graph{
-  display: flex;
-  background-color: aliceblue;
-  width: 55%;
-  height: 25rem;
-  margin-top: 5%;
-  margin-left: 14%;
-  border-radius: 30px;
-  padding: 5%;
-  flex-direction: column;
-}
+/* ======responsive========== */
 
+@media (max-width: 768px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: space-around;
+    }
+    .links{
+        display: none;
+    }
+    #menu-bar{
+        display: block;
+    }
+
+    .show_nav {
+        padding-top: 2%;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+}
