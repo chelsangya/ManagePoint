@@ -7,7 +7,7 @@
 
 .container {
   height: 100vh;
-  background-color: #121147;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
 .warn_info {
   height: 100px;
   width: 95%;
-  margin: 30px 0;
+  margin: 20px 0;
   background-color: #ffe7d9;
   padding: 15px;
   border-radius: 4px;
@@ -52,6 +52,7 @@
   top: 0px;
   left: 0px;
   background-color: #f47142;
+
 }
 
 
@@ -64,6 +65,7 @@
 
 .warn_info p {
   color: #f47142;
+  
 }
 
 .password_box input {
@@ -79,6 +81,7 @@
   font-weight: 400;
   letter-spacing: 0.015em;
   text-align: left;
+ ;
 }
 
 
@@ -99,4 +102,8 @@
   text-decoration: none;
   color: #fff;
   border-radius: 50px;
+}
+
+.clearfix{
+  margin: 20px;
 }
