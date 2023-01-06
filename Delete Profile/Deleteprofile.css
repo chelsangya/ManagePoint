@@ -85,7 +85,11 @@
 }
 
 
-
+.fa-eye ::before{
+  margin: 15px;
+  cursor: pointer;
+  color: lightgray;
+}
 
 
 .clearfix .btn1 {
