@@ -185,8 +185,8 @@
             placeholder="Password"
     />
   </form>
-  <button type="submit" onClick="validateLogin()">Login</button>
-  <p>Don't have an account? <a th:href="@{/templates/create.html}">Create Account</a></p>
+  <button  class="Submit" type="submit" value="login">Login</button>
+  <p>Don't have an account? <a  th:href="@{~/user/create}">Create Account</a></p>
   <h6> OR</h6>
   <div class="googlesignin">
     <div class="g-signin2" data-onsuccess="onSignIn"></div>

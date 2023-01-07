@@ -30,7 +30,6 @@ public class UserController extends BaseController {
 
     @GetMapping("/create")
     public String createUser(Model model){
-
         model.addAttribute("user",new UserPojo());
         return "create";
     }

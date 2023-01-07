@@ -11,14 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping
 public class LoginController {
-
+    @GetMapping("/dashboard")
+    public  String getPage(){
+        return "dashboard";
+    }
     @GetMapping("/login")
     public String showLoginPage() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
-            return "/login";
+            return "login";
         }
-        return "redirect:/";
+        return "redirect:/login";
     }
     @PostMapping("/logout")
     public String logout(Authentication authentication) {
