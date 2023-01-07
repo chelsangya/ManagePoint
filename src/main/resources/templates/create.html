@@ -43,14 +43,18 @@
                 name="fullname"
                 id="fullname"
                 placeholder="Full Name"
-                th:field="${user.u_name}"
+                required
+                th:field="*{u_name}"
+                th:value="${user.u_name}"
         />
         <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
-                th:field="${user.u_email}"
+                required
+                th:field="*{u_email}"
+                th:value="${user.u_email}"
         />
         <span>
           <input
@@ -58,14 +62,18 @@
                   name="address"
                   id="address"
                   placeholder="Address"
-                  th:field="${user.u_address}"
+                  required
+                  th:field="*{u_address}"
+                  th:value="${user.u_address}"
           />
           <input
                   type="tel"
                   name="phone"
                   id="phone"
                   placeholder="Phone Number"
-                  th:field="${user.u_phone}"
+                  required
+                  th:field="*{u_phone}"
+                  th:value="${user.u_phone}"
           />
         </span>
         <input
@@ -73,18 +81,23 @@
                 name="password"
                 id="password"
                 placeholder="Password"
-                th:field="${user.u_password}"
+                required
+                th:field="*{u_password}"
+                th:value="${user.u_password}"
         />
         <input
                 type="password"
                 name="confirm_password"
                 id="confirm_password"
                 placeholder="Confirm Password"
-                th:field="${user.u_password}"
+                required
+                th:field="*{u_password}"
+                th:value="${user.u_password}"
         />
+        <input type="text" hidden th:field="*{u_image}" th:value="@{/images/logo.png}">
     </form>
     <button  class="Submit" type="submit">Create Account</button>
-    <p>Already have an account? <a th:href="@{~/login}"">Login</a></p>
+    <p>Already have an account? <a th:href="@{/login}">Login</a></p>
     <h6> OR</h6>
     <div class="googlesignin">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>

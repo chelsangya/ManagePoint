@@ -33,22 +33,22 @@ public class UserController extends BaseController {
         model.addAttribute("user",new UserPojo());
         return "create";
     }
-    @PostMapping("/create")
-    public String createUser(@Valid @ModelAttribute UserPojo userPojo,
-                             BindingResult bindingResult, RedirectAttributes redirectAttributes) {
-        Map<String, String> requestErrors = validateRequest(bindingResult);
-        if (requestErrors != null) {
-            return "redirect:index";
-        }
-        try {
-            userService.save(userPojo);
-            redirectAttributes.addFlashAttribute("successMsg", "User saved successfully");
-        } catch (AppException appException) {
-            redirectAttributes.addFlashAttribute("errorMsg", appException.getMessage());
-        } finally {
-            return "redirect:/user";
-        }
-    }
+//    @PostMapping("/create")
+//    public String createUser(@Valid @ModelAttribute UserPojo userPojo,
+//                             BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+//        Map<String, String> requestErrors = validateRequest(bindingResult);
+//        if (requestErrors != null) {
+//            return "redirect:index";
+//        }
+//        try {
+//            userService.save(userPojo);
+//            redirectAttributes.addFlashAttribute("successMsg", "User saved successfully");
+//        } catch (AppException appException) {
+//            redirectAttributes.addFlashAttribute("errorMsg", appException.getMessage());
+//        } finally {
+//            return "redirect:/index";
+//        }
+//    }
 
     @PostMapping("/save")
     public String saveUser(@Valid UserPojo userPojo){
@@ -60,6 +60,6 @@ public class UserController extends BaseController {
     public String editUser(@PathVariable("id") Integer id, Model model){
         User user= userService.fetchById(id);
         model.addAttribute("user",new UserPojo(user));
-        return "signup";
+        return "accountdetails";
     }
 }
