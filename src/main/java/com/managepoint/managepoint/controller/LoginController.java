@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping
 public class LoginController {
+    @GetMapping("/index")
+    public String getIndex(){return "index";}
+
     @GetMapping("/dashboard")
     public  String getPage(){
         return "dashboard";

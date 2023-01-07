@@ -21,39 +21,40 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController extends BaseController {
     private final UserService userService;
-    @GetMapping("/list")
-    public String getUserList(Model model){
-        List<User> users=userService.fetchAll();
-        model.addAttribute("userList",users);
-        return "index";
-    }
+
+//    @GetMapping("/list")
+//    public String getUserList(Model model){
+//        List<User> users=userService.fetchAll();
+//        model.addAttribute("userList",users);
+//        return "index";
+//    }
 
     @GetMapping("/create")
-    public String createUser(Model model){
+    public String getRegister(Model model){
         model.addAttribute("user",new UserPojo());
         return "create";
     }
-//    @PostMapping("/create")
-//    public String createUser(@Valid @ModelAttribute UserPojo userPojo,
-//                             BindingResult bindingResult, RedirectAttributes redirectAttributes) {
-//        Map<String, String> requestErrors = validateRequest(bindingResult);
-//        if (requestErrors != null) {
-//            return "redirect:index";
-//        }
-//        try {
-//            userService.save(userPojo);
-//            redirectAttributes.addFlashAttribute("successMsg", "User saved successfully");
-//        } catch (AppException appException) {
-//            redirectAttributes.addFlashAttribute("errorMsg", appException.getMessage());
-//        } finally {
-//            return "redirect:/index";
-//        }
-//    }
+    @PostMapping("/create")
+    public String saveUser(@Valid @ModelAttribute UserPojo userPojo,
+                             BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+        Map<String, String> requestErrors = validateRequest(bindingResult);
+        if (requestErrors != null) {
+            return "redirect:index";
+        }
+        try {
+            userService.save(userPojo);
+            redirectAttributes.addFlashAttribute("successMsg", "User saved successfully");
+        } catch (AppException appException) {
+            redirectAttributes.addFlashAttribute("errorMsg", appException.getMessage());
+        } finally {
+            return "redirect:dashboard";
+        }
+    }
 
     @PostMapping("/save")
     public String saveUser(@Valid UserPojo userPojo){
         userService.save(userPojo);
-        return "redirect:/user/list";
+        return "redirect:index";
     }
 
     @GetMapping("/edit/{id}")
