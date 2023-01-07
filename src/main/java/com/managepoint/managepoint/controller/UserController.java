@@ -25,21 +25,21 @@ public class UserController extends BaseController {
     public String getUserList(Model model){
         List<User> users=userService.fetchAll();
         model.addAttribute("userList",users);
-        return "user/index";
+        return "index";
     }
 
     @GetMapping("/create")
     public String createUser(Model model){
 
         model.addAttribute("user",new UserPojo());
-        return "user/create";
+        return "create";
     }
     @PostMapping("/create")
     public String createUser(@Valid @ModelAttribute UserPojo userPojo,
                              BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         Map<String, String> requestErrors = validateRequest(bindingResult);
         if (requestErrors != null) {
-            return "redirect:/user";
+            return "redirect:index";
         }
         try {
             userService.save(userPojo);

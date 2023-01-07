@@ -142,7 +142,7 @@
   <title>Login Page</title>
   <link rel="stylesheet" type="text/css" th:href="@{/CSS/global.css}"/>
   <link rel="stylesheet" type="text/css" th:href="@{/CSS/createAccount.css}" />
-  <script th:src="@{/js/login.js}"></script>
+  <script type="text/javascript" th:src="@{/javascript/login.js}"></script>
   <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -185,8 +185,8 @@
             placeholder="Password"
     />
   </form>
-  <button type="submit" onClick="window.location.href='analytics.html';">Login</button>
-  <p>Don't have an account? <a th:href="@{/createAccount.html}">Create Account</a></p>
+  <button type="submit" onClick="validateLogin()">Login</button>
+  <p>Don't have an account? <a th:href="@{/templates/create.html}">Create Account</a></p>
   <h6> OR</h6>
   <div class="googlesignin">
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
