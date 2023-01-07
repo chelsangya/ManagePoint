@@ -20,17 +20,15 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public String save(UserPojo userPojo) {
+        System.out.println("entered");
         User user = new User();
-        if(userPojo.getU_id()!=null){
-            user.setU_id(userPojo.getU_id());
-        }
         user.setU_email(userPojo.getU_email());
         user.setU_name(userPojo.getU_name());
         user.setU_address(userPojo.getU_address());
         user.setU_password(userPojo.getU_password());
         user.setU_phone(userPojo.getU_phone());
-        user.setU_image(userPojo.getU_image());
         userRepo.save(user);
+        System.out.println("created");
         return "created";
 //        return new UserPojo(user);
     }

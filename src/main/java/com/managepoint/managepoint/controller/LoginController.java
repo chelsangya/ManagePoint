@@ -24,14 +24,14 @@ public class LoginController {
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return "login";
         }
-        return "redirect:/login";
+        return "redirect:login";
     }
     @PostMapping("/logout")
     public String logout(Authentication authentication) {
         if (authentication.isAuthenticated()) {
             SecurityContextHolder.clearContext();
         }
-        return "/login";
+        return "index";
     }
 
 }

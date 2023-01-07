@@ -9,55 +9,30 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequiredArgsConstructor //creates the constructor with all required arguments
-@RequestMapping("/user")
+@RequestMapping
 public class UserController extends BaseController {
     private final UserService userService;
 
-//    @GetMapping("/list")
-//    public String getUserList(Model model){
-//        List<User> users=userService.fetchAll();
-//        model.addAttribute("userList",users);
-//        return "index";
-//    }
 
     @GetMapping("/create")
     public String getRegister(Model model){
         model.addAttribute("user",new UserPojo());
         return "create";
     }
-    @PostMapping("/create")
-    public String saveUser(@Valid @ModelAttribute UserPojo userPojo,
-                             BindingResult bindingResult, RedirectAttributes redirectAttributes) {
-        Map<String, String> requestErrors = validateRequest(bindingResult);
-        if (requestErrors != null) {
-            return "redirect:index";
-        }
-        try {
-            userService.save(userPojo);
-            redirectAttributes.addFlashAttribute("successMsg", "User saved successfully");
-        } catch (AppException appException) {
-            redirectAttributes.addFlashAttribute("errorMsg", appException.getMessage());
-        } finally {
-            return "redirect:dashboard";
-        }
-    }
 
     @PostMapping("/save")
     public String saveUser(@Valid UserPojo userPojo){
+        System.out.println("controller");
         userService.save(userPojo);
         return "redirect:index";
     }
 
-    @GetMapping("/edit/{id}")
+    @GetMapping("/dashboard/profile/{id}")
     public String editUser(@PathVariable("id") Integer id, Model model){
         User user= userService.fetchById(id);
         model.addAttribute("user",new UserPojo(user));
