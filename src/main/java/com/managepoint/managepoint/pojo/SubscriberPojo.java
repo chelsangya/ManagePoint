@@ -1,7 +1,10 @@
 package com.managepoint.managepoint.pojo;
 
 import com.managepoint.managepoint.entity.Subscriber;
-import javax.validation.constraints.NotEmpty;
+
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +19,7 @@ public class SubscriberPojo {
     private Integer s_id;
     @NotEmpty(message="Name cannot be empty")
     private String s_name;
-    @NotEmpty(message="Email cannot be empty")
+    @Email
     private String s_email;
     public SubscriberPojo(Subscriber subscriber){
         this.s_id=subscriber.getS_id();

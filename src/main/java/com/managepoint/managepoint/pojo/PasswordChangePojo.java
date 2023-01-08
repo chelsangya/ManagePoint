@@ -1,8 +1,9 @@
 package com.managepoint.managepoint.pojo;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
-import javax.validation.constraints.NotEmpty;
+
 
 @Getter
 @Setter

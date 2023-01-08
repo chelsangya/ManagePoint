@@ -111,16 +111,16 @@ class Header extends HTMLElement {
     </style>
     <header>
       <a href="#" class="logo"
-        ><img src="./assets/MP_logo.png" alt="logo" /></a
+        ><img  src="./assets/MP_logo.png" alt="logo" /></a
       >
       <div id="menu-bar" class="fas fa-bars"></div>
       <div class="links">
-        <a href="./subscriber.html">Subscribers</a>
-        <a href="./broadcast.html">Broadcasts</a>
-        <a href="#">Learn</a>
-        <a href="./accountdetails.html"
+        <a th:href="@{~/dashboard/subscriber}">Subscribers</a>
+        <a th:href="@{~/dashboard/broadcast}">Broadcasts</a>
+        <a th:href="@{~/dashboard/learn}">Learn</a>
+        <a  th:href="@{~/dashboard/profile}"
           ><img
-            src="./assets/MP_logo.png"
+           src="./assets/MP_logo.png"
             alt="Profile Pic"
             srcset=""
           />Sangya</a
