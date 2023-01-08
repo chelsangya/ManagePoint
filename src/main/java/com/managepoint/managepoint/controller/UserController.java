@@ -13,31 +13,31 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor //creates the constructor with all required arguments
-@RequestMapping("/user")
+@RequestMapping("")
 public class UserController extends BaseController {
     private final UserService userService;
-    @GetMapping("/create")
+    @GetMapping("/user/create")
     public String createUser(Model model) {
         model.addAttribute("user", new UserPojo());
         return "create";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/user/save")
     public String saveUser(@Valid UserPojo userpojo) {
         userService.save(userpojo);
-        return "redirect:homepage";
+        return "redirect:/index";
     }
 
-    @GetMapping("/edit/{id}")
-    public String editUser(@PathVariable("id") Integer id, Model model){
-        User user= userService.fetchById(id);
-        model.addAttribute("user",new UserPojo(user));
-        return "create";
-    }
-    @GetMapping("/list")
-    public String getUserList(Model model){
-        List<User> users=userService.fetchAll();
-        model.addAttribute("userList",users);
-        return "user/index";
-    }
+//    @GetMapping("user/edit/{id}")
+//    public String editUser(@PathVariable("id") Integer id, Model model){
+//        User user= userService.fetchById(id);
+//        model.addAttribute("user",new UserPojo(user));
+//        return "create";
+//    }
+//    @GetMapping("user/list")
+//    public String getUserList(Model model){
+//        List<User> users=userService.fetchAll();
+//        model.addAttribute("userList",users);
+//        return "user/index";
+//    }
 }
