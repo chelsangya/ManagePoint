@@ -10,6 +10,7 @@
     />
 
     <title>Signup page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/global.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/CSS/createAccount.css}" />
     <script type="text/javascript" th:src="@{/javascript/signup.js}"></script>
 </head>
@@ -17,7 +18,7 @@
 <div class="signup-wrapper">
     <div class="container">
         <div class="header2">
-            <img src="logo.png" class="logo" alt="img" />
+            <img th:src="@{/images/logo.png}" class="logo" alt="img" />
             <h2>Manage Point</h2>
 
             <div class="socialmedia_icon">
@@ -95,7 +96,7 @@
             </div>
             <p>
                 Already have an account?
-                <a th:href="@{/login}" class="link-primary">Log-in</a>
+                <a th:href="@{~/login}" class="link-primary">Log-in</a>
             </p>
 
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
