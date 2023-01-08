@@ -1,11 +1,12 @@
 package com.managepoint.managepoint.pojo;
 
 import com.managepoint.managepoint.entity.Tag;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import javax.validation.constraints.NotEmpty;
+
 
 @Getter
 @Setter

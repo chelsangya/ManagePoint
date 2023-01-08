@@ -1,7 +1,7 @@
 package com.managepoint.managepoint.pojo;
 
 import com.managepoint.managepoint.entity.Email;
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

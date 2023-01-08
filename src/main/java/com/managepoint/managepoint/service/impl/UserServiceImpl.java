@@ -6,6 +6,7 @@ import com.managepoint.managepoint.entity.User;
 import com.managepoint.managepoint.pojo.PasswordChangePojo;
 import com.managepoint.managepoint.pojo.UserPojo;
 import com.managepoint.managepoint.repo.UserRepo;
+import com.managepoint.managepoint.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -15,12 +16,11 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private final UserRepo userRepo;
 
     @Override
     public String save(UserPojo userPojo) {
-        System.out.println("entered");
         User user = new User();
         user.setU_email(userPojo.getU_email());
         user.setU_name(userPojo.getU_name());
@@ -28,9 +28,7 @@ public class UserServiceImpl implements UserService{
         user.setU_password(userPojo.getU_password());
         user.setU_phone(userPojo.getU_phone());
         userRepo.save(user);
-        System.out.println("created");
         return "created";
-//        return new UserPojo(user);
     }
     @Override
     public List<User> fetchAll() {
