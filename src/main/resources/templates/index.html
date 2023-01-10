@@ -14,19 +14,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="@{/css/dashboard.css}" />
-    <link rel="stylesheet" type="text/css" href="@{/css/global.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/dashboard.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/global.css}" />
 </head>
 
 <body>
 <header>
-    <a href="#" class="logo"><img src="@{/images/MP_logo.png}" alt="logo" />Manage Point</a>
+    <a th:href="@{~/index}" class="logo"><img type="image" th:src="@{/images/MP_logo.png}" alt="logo" />Manage Point</a>
     <div id="menu-bar" class="fas fa-bars"></div>
     <div class="links">
-        <a href="~{/keyFeatures}">Key Features</a>
-        <a href="~{/resources}">Resources</a>
-        <a href="~{/login}">Login</a>
-        <a href="~{user/create}" class="signup">Sign Up</a>
+        <a href="#">Key Features</a>
+        <a href="#">Resources</a>
+        <a th:href="@{~/login}">Login</a>
+        <a th:href="@{~/user/create}" class="signup">Sign Up</a>
     </div>
 </header>
 
@@ -70,13 +70,13 @@
     <div class="footer_link">
         <h3>Links</h3>
 
-        <a href="~{/index}">Home</a>
+        <a th:href="~{/index}">Home</a>
 
-        <a href="~{/services}">Service</a>
+        <a href="#">Service</a>
 
-        <a href="~{/features}">Feature</a>
+        <a href="#">Feature</a>
 
-        <a href="~{/contacts}">Contacts</a>
+        <a href="#">Contacts</a>
     </div>
 
     <div class="column_footer">
@@ -90,10 +90,10 @@
             <i class="fa-brands fa-whatsapp"></i>
         </div>
 
-        <img th:src="@{/images/MP_logo.png}" alt="" />
+        <img type="image" th:src="@{/images/MP_logo.png}" alt="" />
     </div>
 </footer>
 </body>
-<script th:src="@{/javascript/script.js}"></script>
+<script type="text/javascript" th:src="@{/javascript/script.js}"></script>
 
 </html>
