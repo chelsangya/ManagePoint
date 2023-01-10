@@ -1,7 +1,4 @@
 /* =========setting up the variables=========== */
-@font-face {
-    font-family: 'outfit';
-    src: url(static/font/Outfit-VariableFont_wght.ttf);}
 :root{
     --primary: #121147;
     --secondary:#fff;
@@ -13,7 +10,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'outfit', serif;
 }
 /* ======left sude============= */
 #left{
@@ -26,18 +22,14 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 3%;
-    font-family: 'outfit';
 }
 #left h1{
     font-size: 4rem;
-    font-family: 'outfit';
 }
 .social{
     display: flex;
     justify-content: space-around;
     font-size: 3rem;
-    border: 1px solid red;
-    width: 90%;
 }
 /* ======left side completed======== */
 /* ======right side ======== */
@@ -48,21 +40,17 @@ body{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    font-family: 'outfit';
 }
 #right h1{
     font-size: 3rem;
     color: var(--primary);
     font-weight: bolder;
-    font-family: 'outfit';
-
 }
 #right form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 50%;
-    font-family: 'outfit';
 }
 /* ---- for login page form ---- */
 #right #loginform{
@@ -74,7 +62,7 @@ input{
     border: none;
     border-bottom: 2px solid var(--primary);
     color: var(--primary);
-    height:15%;
+    height:6vh;
     font-size: 1.4rem;
     padding: 2%;
 }
@@ -97,7 +85,6 @@ button{
     border-radius: 10px;
     font-size: 1.3rem;
     padding: 2%;
-    font-family: 'outfit';
 }
 p{
     color: var(--light-black);
@@ -106,10 +93,10 @@ p{
 h6{
     text-align: center;
 }
-/*.googlesignin div{*/
-/*    margin: auto;*/
-/*    width: 50%;*/
-/*}*/
+.googlesignin div{
+    margin: auto;
+    width: 50%;
+}
 /* ==========responsive============= */
 @media only screen and (max-width: 600px) {
     body {
