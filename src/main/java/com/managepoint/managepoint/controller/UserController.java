@@ -28,6 +28,7 @@ public class UserController extends BaseController {
         return "redirect:/index";
     }
 
+
 //    @GetMapping("user/edit/{id}")
 //    public String editUser(@PathVariable("id") Integer id, Model model){
 //        User user= userService.fetchById(id);

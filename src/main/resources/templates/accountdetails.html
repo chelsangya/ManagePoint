@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  dir="ltr" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account details</title>
-    <script src="../static/javascript/navigationbar.js" defer>   </script>
-    <link rel="stylesheet" href="../static/CSS/accountdetail.css">
+    <script th:src="@{/javascript/navigationbar.js}" defer>   </script>
+    <link rel="stylesheet" th:href="@{/css/accountdetail.css}">
 </head>
 <body>
 <navigation-bar></navigation-bar>
 <section id="body">
     <div class="left">
-        <a href="#">Account Details</a>
-        <a href="./notification.html">Notifications</a>
-        <a href="#">Help?</a>
-        <a href="#">Logout</a>
+        <a th:href="~{/user/accountDetails}">Account Details</a>
+        <a th:href="~{/user/notification}">Notifications</a>
+        <a th:href="~{user/help}">Help?</a>
+        <a th:href="~{/index}">Logout</a>
     </div>
 
     <div class="right">
@@ -23,24 +23,29 @@
             <h1>Account Details</h1>
 
             <div class="profile-info">
-                <img src="../static/images/logo.png" alt="" srcset="">
+                <img th:src="@{/images/MP_logo.png}" alt="" srcset="">
                 <div class="detail">
                     <h3>Profile Picture</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, distinctio?</p>
                 </div>
             </div>
-            <form action="" method="post">
+            <form class="accountDetails" method="post" th:action="@{/user/save}" th:object="${user}">
+                <input hidden type="text" required th:field="*{u_id}">
                 <input
                         type="text"
                         name="fullname"
                         id="fullname"
                         placeholder="Edit Full Name"
+                        required th:field="*{u_name}"
+                        th:value="${user.u_name}"
                 />
                 <input
                         type="email"
                         name="email"
                         id="email"
                         placeholder="Edit Email Address"
+                        required th:field="*{u_email}"
+                        th:value="${user.u_email}"
                 />
 
                 <input
@@ -48,12 +53,16 @@
                         name="address"
                         id="address"
                         placeholder="Edit Address"
+                        required th:field="*{u_address}"
+                        th:value="${user.u_address}"
                 />
                 <input
                         type="tel"
                         name="phone"
                         id="phone"
                         placeholder="Edit Phone Number"
+                        required th:field="*{u_phone}"
+                        th:value="${user.u_phone}"
                 />
 
                 <input
@@ -61,6 +70,8 @@
                         name="password"
                         id="password"
                         placeholder="Edit Password"
+                        required th:field="*{u_password}"
+                        th:value="${user.u_password}"
                 />
             </form>
         </div>

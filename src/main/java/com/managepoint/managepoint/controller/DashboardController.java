@@ -12,6 +12,7 @@ public class DashboardController {
 //    public String getDashboard(){
 //        return "dashboard";
 //    }
+
     @GetMapping("/broadcast")
     public String getBroadcast() {
         return "broadcast";
@@ -28,5 +29,7 @@ public class DashboardController {
     }
     @GetMapping("/profile")
     public String getProfile(){return "accountdetails";}
+    @GetMapping("/notification")
+    public String getNotification(){return "notifications";}
 
 }
