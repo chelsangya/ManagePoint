@@ -19,7 +19,8 @@ import java.util.Collection;
 @DynamicInsert
 @DynamicUpdate
 @Entity
-@Table(name="users")
+@Table(name="users", uniqueConstraints = {
+        @UniqueConstraint(name = "UNIQUE_mp_user_email", columnNames = "u_email")})
 public class User implements UserDetails {
     @Id
     @SequenceGenerator(name = "mp_user_seq_gen", sequenceName = "mp_user_id_seq", allocationSize = 1)

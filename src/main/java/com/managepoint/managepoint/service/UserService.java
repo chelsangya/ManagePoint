@@ -13,4 +13,7 @@ public interface UserService {
     User fetchById(Integer id);
     void deleteById(Integer id);
     void changePassword(PasswordChangePojo passwordChangePojo);
+
+    UserPojo findByEmail(String email);
+
 }

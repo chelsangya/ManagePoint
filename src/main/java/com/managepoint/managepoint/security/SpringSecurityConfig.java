@@ -1,7 +1,7 @@
 package com.managepoint.managepoint.security;
 
 import com.managepoint.managepoint.config.PasswordEncoderUtil;
-import com.managepoint.managepoint.service.impl.UserDetailService;
+import com.managepoint.managepoint.service.impl.CustomUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -15,16 +15,16 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 
 public class SpringSecurityConfig {
-    private final UserDetailService userDetailService;
+    private final CustomUserDetailService customUserDetailService;
 
-    public SpringSecurityConfig(UserDetailService userDetailService) {
-        this.userDetailService = userDetailService;
+    public SpringSecurityConfig(CustomUserDetailService customUserDetailService) {
+        this.customUserDetailService = customUserDetailService;
     }
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
-        authenticationProvider.setUserDetailsService(userDetailService);
+        authenticationProvider.setUserDetailsService(customUserDetailService);
         authenticationProvider.setPasswordEncoder(PasswordEncoderUtil.getInstance());
         return authenticationProvider;
     }
@@ -40,7 +40,7 @@ public class SpringSecurityConfig {
                 .formLogin()
                 .loginPage("/login")
                 .defaultSuccessUrl("/dashboard",true)
-                .usernameParameter("email")
+                .usernameParameter("u_email")
                 .permitAll()
                 .and()
                 .httpBasic();
@@ -49,6 +49,6 @@ public class SpringSecurityConfig {
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer(){
-        return (web) -> web.ignoring().anyRequest();
+        return (web) -> web.ignoring().requestMatchers("/CSS/**","/font/**","/javascript/**","/images/**","/introductionVideo/**");
     }
 }

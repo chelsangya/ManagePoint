@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         user.setU_email(userPojo.getU_email());
         user.setU_name(userPojo.getU_name());
         user.setU_address(userPojo.getU_address());
-        user.setU_password(userPojo.getU_password());
+        user.setU_password(PasswordEncoderUtil.getInstance().encode(userPojo.getU_password()));
         user.setU_phone(userPojo.getU_phone());
         userRepo.save(user);
         return "created";
@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> optionalUser = userRepo.findByEmail(passwordChangePojo.getEmail());
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
-            if (PasswordEncoderUtil.getInstance().matches(passwordChangePojo.getOldPassword(), user.getU_password())) {
+            if (PasswordEncoderUtil.getInstance().matches(passwordChangePojo.getOldPassword(), user.getPassword())) {
                 if (passwordChangePojo.getNewPassword().equals(passwordChangePojo.getRepeatPassword())) {
                     user.setU_password(PasswordEncoderUtil.getInstance().encode(passwordChangePojo.getNewPassword()));
                     userRepo.save(user);
@@ -62,5 +62,15 @@ public class UserServiceImpl implements UserService {
                 throw new AppException("Old Password doesn't match existing password.", HttpStatus.BAD_REQUEST);
             }
         }
+
+    }
+
+    @Override
+    public UserPojo findByEmail(String email) {
+        System.out.println(1);
+        User user = userRepo.findByEmail(email)
+                .orElseThrow(() -> new AppException("Invalid User email", HttpStatus.BAD_REQUEST));
+        System.out.println(2);
+        return new UserPojo(user);
     }
 }
