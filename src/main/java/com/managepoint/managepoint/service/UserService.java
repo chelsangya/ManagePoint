@@ -12,8 +12,8 @@ public interface UserService {
     List<User> fetchAll();
     User fetchById(Integer id);
     void deleteById(Integer id);
-    void changePassword(PasswordChangePojo passwordChangePojo);
+//    void changePassword(PasswordChangePojo passwordChangePojo);
 
-    UserPojo findByEmail(String email);
+    UserPojo findByEmail(String u_email);
 
 }

@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/dashboard")
 public class DashboardController {
-//    public String getDashboard(){
-//        return "dashboard";
-//    }
 
     @GetMapping("/broadcast")
     public String getBroadcast() {

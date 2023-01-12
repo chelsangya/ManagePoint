@@ -1,6 +1,7 @@
 package com.managepoint.managepoint.entity;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,8 +11,12 @@ import java.util.Date;
 @Getter
 @Setter
 public class Email_Subscriber {
-    @EmbeddedId
-    Email_Subscriber_Id emailSubscriberId;
+    @Getter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     @ManyToOne
     @MapsId("e_id")
@@ -23,4 +28,12 @@ public class Email_Subscriber {
     private Subscriber subscriber;
    @Column(name="es_date",nullable = false)
     private Date es_date;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

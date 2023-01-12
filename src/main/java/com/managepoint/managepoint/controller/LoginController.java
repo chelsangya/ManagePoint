@@ -24,8 +24,6 @@ public class LoginController {
     @GetMapping("/index")
     public String getIndex(){return "index";}
 
-
-
     @GetMapping("/dashboard")
     public  String getPage(){
         return "dashboard";
@@ -37,8 +35,7 @@ public class LoginController {
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return "login";
         }
-        System.out.println("Logged in");
-        return "dashboard";
+        return "/dashboard";
     }
     @PostMapping("/logout")
     public String logout(Authentication authentication) {
