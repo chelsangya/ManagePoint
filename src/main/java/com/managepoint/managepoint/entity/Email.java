@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+import java.util.Set;
+
 @Entity
 @Getter
 @Setter
@@ -20,7 +23,12 @@ public class Email {
     private String e_content;
     @Column(name="e_status",nullable = false)
     private  String e_status;
+    @Column(name = "e_date",nullable = false)
+    private Date e_date;
     @ManyToOne
     @JoinColumn(name="ue_id",nullable=false)
     private User user;
+    @ManyToMany
+    @JoinTable(name = "email_subscriber", joinColumns = @JoinColumn(name = "e_id"), inverseJoinColumns = @JoinColumn(name = "s_id"))
+    private Set<Subscriber> subscribers;
 }

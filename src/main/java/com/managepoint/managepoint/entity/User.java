@@ -38,7 +38,7 @@ public class User implements UserDetails {
     private String u_address;
     @Column(name = "u_password",nullable = false)
     private String u_password;
-    @Column(columnDefinition = "/images/logo.png")
+    @Column(name = "u_image",nullable = true)
     private String u_image;
 
     @Override
