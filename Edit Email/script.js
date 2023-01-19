@@ -5,7 +5,7 @@ form.onsubmit = (e)=>{
   e.preventDefault();
   statusTxt.style.color = "#0D6EFD";
   statusTxt.style.display = "block";
-  statusTxt.innerText = "Sending your message...";
+  statusTxt.innerText = "Sending your draft...";
   form.classList.add("disabled");
 
   let xhr = new XMLHttpRequest();

@@ -124,6 +124,25 @@ form .button-area{
   margin-left: 30px;
   display: none;
 }
+.send-button-area button{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #121147;
+  transition: background 0.3s ease;
+}
+.send-button-area button:hover{
+  background: #121147;
+}
+.send-button-area span{
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
 @media (max-width: 600px){
   .wrapper header{
     text-align: center;
