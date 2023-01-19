@@ -9,33 +9,33 @@
                         ele[i].checked=true;  
                 }  
             }  
-            // function deSelect(){  
-            //     var ele=document.getElementsByName('chk');  
-            //     for(var i=0; i<ele.length; i++){  
-            //         if(ele[i].type=='checkbox')  
-            //             ele[i].checked=false;  
+            function deSelect(){  
+                var ele=document.getElementsByName('chk');  
+                for(var i=0; i<ele.length; i++){  
+                    if(ele[i].type=='checkbox')  
+                        ele[i].checked=false;  
                       
-            //     }  
-            // }   
-            // function delet(){  
-            //     var ele=document.getElementsByName('chk');  
-            //     for(var i=0; i<ele.length; i++){  
-            //         if(ele[i].type=='checkbox')  
-            //             ele[i].checked=false;  
+                }  
+            }   
+            function delet(){  
+                var ele=document.getElementsByName('chk');  
+                for(var i=0; i<ele.length; i++){  
+                    if(ele[i].type=='checkbox')  
+                        ele[i].checked=false;  
                       
-            //     }  
-            // }                       
+                }  
+            }                       
         </script>  
-//     </head>  
-// <body>  
-//     <h3>Select or Deselect all </h3>  
-//     <input type="checkbox" name="chk" value="option1">option1<br>  
-//     <input type="checkbox" name="chk" value="option2">option2<br>  
-//     <input type="checkbox" name="chk" value="option3">option3<br>  
-//     <input type="checkbox" name="chk" value="option4">option4<br>  
-//      <br>  
-//         <input type="button" onclick='selects()' value="Select All"/>  
-//         <input type="button" onclick='deSelect()' value="Deselect All"/>  
-//         <input type="button" onclick='delet()' value="delete"/> 
+     </head>  
+ <body>  
+   <!-- <h3>Select or Deselect all </h3>  
+     <input type="checkbox" name="chk" value="option1">option1<br>  
+     <input type="checkbox" name="chk" value="option2">option2<br>  
+     <input type="checkbox" name="chk" value="option3">option3<br>  
+     <input type="checkbox" name="chk" value="option4">option4<br>  
+      <br>   -->
+         <input type="button" onclick='selects()' value="Select All"/>  
+         <input type="button" onclick='deSelect()' value="Deselect All"/>  
+         <input type="button" onclick='delet()' value="delete"/> 
       </body>  
 </html>  
