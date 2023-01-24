@@ -40,22 +40,22 @@
                 </div>
             </div>
             <form class="accountDetails" method="post" th:action="@{/user/save}" th:object="${user}">
-                <input hidden type="text" required th:field="*{id}">
+                <input hidden type="text" required th:field="*{u_id}">
                 <input
                         type="text"
                         name="fullname"
                         id="fullname"
                         placeholder="Edit Full Name"
-                        required th:field="*{name}"
-                        th:value="${user.name}"
+                        required th:field="*{u_name}"
+                        th:value="${user.u_name}"
                 />
                 <input
                         type="email"
                         name="email"
                         id="email"
                         placeholder="Edit Email Address"
-                        required th:field="*{email}"
-                        th:value="${user.email}"
+                        required th:field="*{u_email}"
+                        th:value="${user.u_email}"
                 />
 
                 <input
@@ -63,16 +63,16 @@
                         name="address"
                         id="address"
                         placeholder="Edit Address"
-                        required th:field="*{address}"
-                        th:value="${user.address}"
+                        required th:field="*{u_address}"
+                        th:value="${user.u_address}"
                 />
                 <input
                         type="tel"
                         name="phone"
                         id="phone"
                         placeholder="Edit Phone Number"
-                        required th:field="*{phone}"
-                        th:value="${user.phone}"
+                        required th:field="*{u_phone}"
+                        th:value="${user.u_phone}"
                 />
 
                 <input
@@ -80,8 +80,8 @@
                         name="password"
                         id="password"
                         placeholder="Edit Password"
-                        required th:field="*{password}"
-                        th:value="${user.password}"
+                        required th:field="*{u_password}"
+                        th:value="${user.u_password}"
                 />
             </form>
         </div>
