@@ -1,4 +1,8 @@
 /* setting up the variables */
+@font-face {
+  font-family: 'outfit';
+  src: url(static/font/Outfit-VariableFont_wght.ttf);}
+
 
 :root{
 
@@ -17,6 +21,7 @@
 }
 
 body{
+  font-family: 'outfit';
 
   color: var(--secondary);
 
@@ -33,6 +38,7 @@ header{
   background: var(--primary);
 
   padding: 2%;
+  font-family: 'outfit';
 
 }
 
@@ -41,6 +47,7 @@ a{
   color: var(--secondary);
 
   text-decoration: none;
+  font-family: 'outfit';
 
 }
 
@@ -88,7 +95,7 @@ a{
   
   -webkit-clip-path: polygon(0% 50%, 110% 100%, 100% 100%, 100% 100%, 100% -200000%);
   clip-path: polygon(0% 50%, 110% 100%, 100% 100%, 100% 100%, 100% -200000%);
- 
+  font-family: 'outfit';
 
 }
 
@@ -101,6 +108,7 @@ a{
   margin-left: auto;
 
   align-self: center;
+  font-family: 'outfit';
 
 }
 
@@ -111,7 +119,7 @@ a{
   padding: 3%;
 
   flex-wrap: wrap;
-
+  font-family: 'outfit';
 }
 
 .main2 h2{
@@ -121,7 +129,7 @@ a{
   font-size: 3rem;
 
   width: 50%;
-
+  font-family: 'outfit';
 }
 
 /* =========footer started======= */
@@ -139,7 +147,7 @@ footer{
   border-top-left-radius: 30px;
 
   border-top-right-radius: 30px;
-
+  font-family: 'outfit';
 }
 
 .column_footer{
@@ -149,6 +157,7 @@ footer{
   display: flex;
 
   justify-content: space-around;
+  font-family: 'outfit';
 
 }
 
@@ -177,5 +186,5 @@ footer{
   width: 50px;
 
   height: 50px;
-
+  font-family: 'outfit';
 }
