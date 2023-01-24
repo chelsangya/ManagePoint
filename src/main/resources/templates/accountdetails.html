@@ -13,75 +13,70 @@
             referrerpolicy="no-referrer"
     />
     <script th:src="@{/javascript/navigationbar.js}" defer>   </script>
-    <link rel="stylesheet" th:href="@{/css/accountdetail.css}">
-    <link rel="stylesheet" th:href="@{/css/navigationbar.css}">
+    <link rel="stylesheet" th:href="@{/CSS/accountdetail.css}">
+    <link rel="stylesheet" th:href="@{/CSS/navigationbar.css}">
 </head>
 <body>
 <header>
     <div class=flex-top th:replace="~{fragments/navigationbar.html :: navbar}"> </div>
 </header>
 <section id="body">
-    <div class="left">
-        <a th:href="~{/user/accountDetails}">Account Details</a>
-        <a th:href="~{/user/notification}">Notifications</a>
-        <a th:href="~{user/help}">Help?</a>
-        <a th:href="~{/index}">Logout</a>
-    </div>
+<!--    <div class="left">-->
+<!--        <a th:href="~{/dashboard/profile}">Account Details</a>-->
+<!--        <a th:href="~{/dashboard/notification}">Notifications</a>-->
+<!--        <a th:href="~{dashboard/help}">Help?</a>-->
+<!--        <a th:href="~{/index}">Logout</a>-->
+<!--    </div>-->
 
-    <div class="right">
-        <div class="upper_part">
-            <h1>Account Details</h1>
+<!--    <div class="right">-->
+<!--        <div class="upper_part">-->
+<!--            <h1>Account Details</h1>-->
 
-            <div class="profile-info">
-                <img th:src="@{/images/MP_logo.png}" alt="" srcset="">
-                <div class="detail">
-                    <h3>Profile Picture</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, distinctio?</p>
-                </div>
-            </div>
+<!--            <div class="profile-info">-->
+<!--                <img th:src="@{/images/MP_logo.png}" alt="" srcset="">-->
+<!--                <div class="detail">-->
+<!--                    <h3>Profile Picture</h3>-->
+<!--                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, distinctio?</p>-->
+<!--                </div>-->
+<!--            </div>-->
             <form class="accountDetails" method="post" th:action="@{/user/save}" th:object="${user}">
-                <input hidden type="text" required th:field="*{u_id}">
+                <input hidden type="text" required th:field="*{id}">
                 <input
                         type="text"
                         name="fullname"
                         id="fullname"
-                        placeholder="Edit Full Name"
-                        required th:field="*{u_name}"
-                        th:value="${user.u_name}"
+                        required th:field="*{name}"
+                        th:value="${user.name}"
                 />
                 <input
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Edit Email Address"
-                        required th:field="*{u_email}"
-                        th:value="${user.u_email}"
+                        required th:field="*{email}"
+                        th:value="${user.email}"
                 />
 
                 <input
                         type="text"
                         name="address"
                         id="address"
-                        placeholder="Edit Address"
-                        required th:field="*{u_address}"
-                        th:value="${user.u_address}"
+                        required th:field="*{address}"
+                        th:value="${user.address}"
                 />
                 <input
                         type="tel"
                         name="phone"
                         id="phone"
-                        placeholder="Edit Phone Number"
-                        required th:field="*{u_phone}"
-                        th:value="${user.u_phone}"
+                        required th:field="*{phone}"
+                        th:value="${user.phone}"
                 />
 
                 <input
                         type="password"
                         name="password"
                         id="password"
-                        placeholder="Edit Password"
-                        required th:field="*{u_password}"
-                        th:value="${user.u_password}"
+                        required th:field="*{password}"
+                        th:value="${user.password}"
                 />
             </form>
         </div>
@@ -93,13 +88,13 @@
     </div>
 </section>
 </body>
-<script>
-    const navToggle = document.querySelector("#menu-bar");
-    const link = document.querySelector(".links");
+<!--<script>-->
+<!--    const navToggle = document.querySelector("#menu-bar");-->
+<!--    const link = document.querySelector(".links");-->
 
-    navToggle.addEventListener("click", function () {
-        navToggle.classList.toggle("fa-times");
-        link.classList.toggle("show_nav");
-    });
-</script>
+<!--    navToggle.addEventListener("click", function () {-->
+<!--        navToggle.classList.toggle("fa-times");-->
+<!--        link.classList.toggle("show_nav");-->
+<!--    });-->
+<!--</script>-->
 </html>

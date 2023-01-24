@@ -32,4 +32,6 @@ public class DashboardController {
     public String getNotification(){return "notifications";}
     @GetMapping("/newsletter")
     public String getNewsletter(){return "newsletter";}
+    @GetMapping("/createtag")
+    public String getCreateTag(){return "create_tag";}
 }
