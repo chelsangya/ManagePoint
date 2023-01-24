@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscriber</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/subscriber.css}">
+  <script type="text/javascript" th:src="@{/javascript/navigationbar.js}"></script>
+</head>
+
+<body>
+<navigation-bar></navigation-bar>
+<div class="upper-part">
+
+  <select id="subscriber_type">
+    <option value="all-subscriber">All Subscriber</option>
+    <option value="totalemail">Email</option>
+  </select>
+  <form class="search" action="">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit">Search</i></button>
+  </form>
+</div>
+<div class="lower-part">
+  <table id="customers">
+    <tr>
+      <th>Subscriber</th>
+      <th>Subscribtion date</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>basnata sfdsaf</td>
+      <td>23/3/2022</td>
+      <td>Subscribed</td>
+    </tr>
+    <tr>
+      <td>basnata sfdsaf</td>
+      <td>23/3/2022</td>
+      <td>Subscribed</td>
+    </tr>
+    <tr>
+      <td>basnata sfdsaf</td>
+      <td>23/3/2022</td>
+      <td>Subscribed</td>
+    </tr>
+
+  </table>
+  <div class="side-part">
+    <h3>Subscriber count: <span>0</span></h3>
+    <div class="mini">
+      <button>Add subscriber</button>
+      <button>Manage preference</button>
+    </div>
+    <div class="mini"></div>
+  </div>
+</div>
+</body>
+
+</html>
