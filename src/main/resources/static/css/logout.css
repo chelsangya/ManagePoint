@@ -1,5 +1,8 @@
+@font-face {
+	font-family: 'outfit';
+	src: url(static/font/Outfit-VariableFont_wght.ttf);}
 body {
-	font-family: 'Varela Round', sans-serif;
+	font-family: "outfit";
 }
 .modal-confirm {		
 	color: #ffffff; 
@@ -44,5 +47,6 @@ body {
 	min-height: 50px;
 	border-radius: 20px;
 	margin: 0 5px;
+	font-family: "outfit";
 }
 
