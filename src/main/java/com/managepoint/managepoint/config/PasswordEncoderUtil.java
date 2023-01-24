@@ -12,5 +12,4 @@ public final class PasswordEncoderUtil {
     public static BCryptPasswordEncoder getInstance() {
         return PASSWORD_ENCODER;
     }
-
 }

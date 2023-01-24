@@ -15,10 +15,6 @@
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
   />
-  <meta
-          name="google-signin-client_id"
-          content="407054153706-enhsit4msbriahvhumvvrrgfbv5hqni5.apps.googleusercontent.com"
-  />
 </head>
 <body>
 <section id="left">
@@ -35,45 +31,27 @@
 </section>
 
 <section id="right">
-  <h1>Create Account</h1>
-  <form action="" method="post" th:action="@{/login}"  id="loginform">
+  <h1>Login</h1>
+  <form method="post" th:action="@{/login}" id="loginform">
     <input
             type="email"
-            name="U_email"
+            name="email"
             id="email"
             placeholder="Email Address"
             required autofocus
     />
+
     <input
             type="password"
-            name="U_password"
+            name="password"
             id="password"
-            placeholder="Password"
-            required autofocus
-    />
-    <button type="submit" onClick=validateLogin()>Login</button>
+            placeholder="Password"  required autofocus/>
+
+    <button type="submit">Login</button>
   </form>
 
   <p>Don't have an account? <a  th:href="@{~/user/create}">Create Account</a></p>
   <h6> OR</h6>
-  <div class="googlesignin">
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-    <script
-            src="https://apis.google.com/js/platform.js"
-            async
-            defer
-    ></script>
-    <script>
-      function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log("Name: " + profile.getName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }
-    </script>
-  </div>
 </section>
 </body>
 </html>

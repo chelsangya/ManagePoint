@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/dashboard")
 public class DashboardController {
-//    public String getDashboard(){
-//        return "dashboard";
-//    }
 
     @GetMapping("/broadcast")
     public String getBroadcast() {
@@ -22,6 +19,8 @@ public class DashboardController {
     public String getGallery() {
         return "subscriber";
     }
+    @GetMapping("/help")
+    public  String getHelp(){return "help";}
 
     @GetMapping("/learn")
     public String getBlogs() {
@@ -31,5 +30,8 @@ public class DashboardController {
     public String getProfile(){return "accountdetails";}
     @GetMapping("/notification")
     public String getNotification(){return "notifications";}
-
+    @GetMapping("/newsletter")
+    public String getNewsletter(){return "newsletter";}
+    @GetMapping("/createtag")
+    public String getCreateTag(){return "create_tag";}
 }

@@ -7,7 +7,7 @@ function validateSignup(){
     let address=document.getElementById("address").value
     let phone=document.getElementById("phone").value
     let password=document.getElementById("password").value
-    let cpassword=document.getElementById("confirm_password").value
+    let cpassword=document.getElementById("cpassword").value
     if(name==''||email==''||address==''||phone==''||password==''||cpassword==''){
         alert("Enter all the details")
     } else if(!(email.match(validRegex))){
@@ -20,5 +20,6 @@ function validateSignup(){
         alert("The passwords do not match")
     } else{
         alert("Registered Successfully")
+        document.getElementsByClassName("submitbutton").item(0).type="submit"
     }
 }

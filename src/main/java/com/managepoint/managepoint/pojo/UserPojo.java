@@ -13,21 +13,21 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UserPojo {
     @NotEmpty(message = "Name can't be empty")
-    private String u_name;
+    private String name;
     @NotEmpty(message = "Email can't be empty")
-    private String u_email;
+    private String email;
     @NotEmpty(message = "Phone can't be empty")
-    private String u_phone;
+    private String phone;
     @NotEmpty(message = "Address can't be empty")
-    private String u_address;
+    private String address;
     @NotEmpty(message = "Password can't be empty")
-    private String u_password;
+    private String password;
     public UserPojo(User user){
-        this.u_email= user.getU_email();
-        this.u_name= user.getU_name();
-        this.u_phone= user.getU_phone();
-        this.u_password=user.getU_password();
-        this.u_address = user.getU_address();
+        this.email= user.getEmail();
+        this.name= user.getName();
+        this.phone= user.getPhone();
+        this.password=user.getPassword();
+        this.address = user.getAddress();
     }
 
 }

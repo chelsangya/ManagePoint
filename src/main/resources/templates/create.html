@@ -33,39 +33,39 @@
     <h1>Create Account</h1>
 
     <form class="signup" th:method="post" th:action="@{/user/save}" th:object="${user}">
-        <input type="text" class="form-control" id="fullname" placeholder="Full Name" required th:field="*{u_name}"/>
+        <input type="text" class="form-control" id="fullname" placeholder="Full Name" required th:field="*{name}"/>
 
-        <input type="email" name="email" id="email" placeholder="Email"  required th:field="*{u_email}" />
+        <input type="email" name="email" id="email" placeholder="Email"  required th:field="*{email}" />
         <span>
-                    <input type="text" name="Address" id="address"placeholder="Address" required th:field="*{u_address}" />
-                    <input type="number" name="Phone number" id="phone" placeholder="Phone Number" maxlength="10" required th:field="*{u_phone}"/>
+                    <input type="text" name="Address" id="address"placeholder="Address" required th:field="*{address}" />
+                    <input type="number" name="Phone number" id="phone" placeholder="Phone Number" maxlength="10" required th:field="*{phone}"/>
       </span>
-        <input type="password" id="password" placeholder="Password" required th:field="*{u_password}" />
+        <input type="password" id="password" placeholder="Password" required th:field="*{password}" />
         <input type="password" id="cpassword" placeholder="Confirm Password" />
-        <button class="submitbutton" type="submit" onclick="validateSignup()"> Create Account </button>
+        <button class="submitbutton" type="button" onclick="validateSignup()"> Create Account </button>
 
     </form>
     <p>Already have an account? <a th:href="@{~/login}">Login</a></p>
-    <h6> OR</h6>
-    <div class="googlesignin">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+<!--    <h6> OR</h6>-->
+<!--    <div class="googlesignin">-->
+<!--        <div class="g-signin2" data-onsuccess="onSignIn"></div>-->
 
-        <script
-                src="https://apis.google.com/js/platform.js"
-                async
-                defer
-        ></script>
-        <script>
-            function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
-                console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                console.log("Name: " + profile.getName());
-                console.log("Image URL: " + profile.getImageUrl());
-                console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-            }
-        </script>
-        </form>
-    </div>
+<!--        <script-->
+<!--                src="https://apis.google.com/js/platform.js"-->
+<!--                async-->
+<!--                defer-->
+<!--        ></script>-->
+<!--        <script>-->
+<!--            function onSignIn(googleUser) {-->
+<!--                var profile = googleUser.getBasicProfile();-->
+<!--                console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.-->
+<!--                console.log("Name: " + profile.getName());-->
+<!--                console.log("Image URL: " + profile.getImageUrl());-->
+<!--                console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.-->
+<!--            }-->
+<!--        </script>-->
+<!--        </form>-->
+<!--    </div>-->
 
 </section>
 </body>

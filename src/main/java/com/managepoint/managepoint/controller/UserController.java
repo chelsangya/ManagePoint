@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor //creates the constructor with all required arguments
-@RequestMapping("")
+@RequestMapping()
 public class UserController extends BaseController {
     private final UserService userService;
     @GetMapping("/user/create")
