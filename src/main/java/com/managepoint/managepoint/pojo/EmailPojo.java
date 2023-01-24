@@ -13,18 +13,18 @@ import lombok.Setter;
 @AllArgsConstructor
 public class EmailPojo {
     @NotEmpty(message="ID cannot be empty")
-    private Integer e_id;
+    private Integer id;
     @NotEmpty(message="Title cannot be empty")
-    private String e_title;
+    private String title;
     @NotEmpty(message="Status cannot be empty")
-    private String e_status;
+    private String status;
     @NotEmpty(message="Content cannot be empty")
-    private String e_content;
+    private String content;
 
     public EmailPojo(Email email){
-        this.e_id= email.getE_id();
-        this.e_title= email.getE_title();
-        this.e_content=email.getE_content();
-        this.e_status=email.getE_status();
+        this.id= email.getId();
+        this.title= email.getTitle();
+        this.content=email.getContent();
+        this.status=email.getStatus();
     }
 }

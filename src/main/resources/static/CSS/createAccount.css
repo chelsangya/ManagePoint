@@ -93,10 +93,10 @@ p{
 h6{
     text-align: center;
 }
-.googlesignin div{
-    margin: auto;
-    width: 50%;
-}
+/*.googlesignin div{*/
+/*    margin: auto;*/
+/*    width: 50%;*/
+/*}*/
 /* ==========responsive============= */
 @media only screen and (max-width: 600px) {
     body {

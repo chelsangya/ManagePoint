@@ -1,6 +1,8 @@
 package com.managepoint.managepoint.security;
 
+import com.managepoint.managepoint.config.PasswordEncoderUtil;
 import com.managepoint.managepoint.service.impl.CustomUserDetailService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -13,30 +15,25 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-
 public class SpringSecurityConfig {
     private final CustomUserDetailService customUserDetailService;
 
-    public SpringSecurityConfig(CustomUserDetailService customUserDetailService) {
+    public SpringSecurityConfig(CustomUserDetailService customUserDetailService){
         this.customUserDetailService = customUserDetailService;
-    }
-
-    public BCryptPasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
     }
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setUserDetailsService(customUserDetailService);
-        authenticationProvider.setPasswordEncoder(passwordEncoder());
+        authenticationProvider.setPasswordEncoder(PasswordEncoderUtil.getInstance());
         return authenticationProvider;
     }
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws  Exception{
         httpSecurity.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/user/**","/index","/login")
+                .requestMatchers("/user/**","/index","/login","/logout")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -44,7 +41,7 @@ public class SpringSecurityConfig {
                 .formLogin()
                 .loginPage("/login")
                 .defaultSuccessUrl("/dashboard",true)
-                .usernameParameter("u_email")
+                .usernameParameter("email")
                 .permitAll()
                 .and()
                 .httpBasic();
@@ -53,6 +50,6 @@ public class SpringSecurityConfig {
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer(){
-        return (web) -> web.ignoring().requestMatchers("/CSS/**","/font/**","/javascript/**","/images/**","/introductionVideo/**");
+        return (web) -> web.ignoring().requestMatchers("/CSS/**","/font/**","/javascript/**","/images/**","/introductionVideo/**","/node_modules/**");
     }
 }

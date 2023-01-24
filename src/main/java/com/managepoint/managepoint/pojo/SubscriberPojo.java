@@ -16,14 +16,14 @@ import lombok.Setter;
 @AllArgsConstructor
 public class SubscriberPojo {
     @NotEmpty(message="ID cannot be empty")
-    private Integer s_id;
+    private Integer id;
     @NotEmpty(message="Name cannot be empty")
-    private String s_name;
+    private String name;
     @Email
-    private String s_email;
+    private String email;
     public SubscriberPojo(Subscriber subscriber){
-        this.s_id=subscriber.getS_id();
-        this.s_name=subscriber.getS_name();
-        this.s_email=subscriber.getS_email();
+        this.id=subscriber.getId();
+        this.name=subscriber.getName();
+        this.email=subscriber.getEmail();
     }
 }

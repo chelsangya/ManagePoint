@@ -19,6 +19,8 @@ public class DashboardController {
     public String getGallery() {
         return "subscriber";
     }
+    @GetMapping("/help")
+    public  String getHelp(){return "help";}
 
     @GetMapping("/learn")
     public String getBlogs() {
@@ -28,5 +30,6 @@ public class DashboardController {
     public String getProfile(){return "accountdetails";}
     @GetMapping("/notification")
     public String getNotification(){return "notifications";}
-
+    @GetMapping("/newsletter")
+    public String getNewsletter(){return "newsletter";}
 }

@@ -1,5 +1,6 @@
 package com.managepoint.managepoint.service.impl;
 
+import com.managepoint.managepoint.config.PasswordEncoderUtil;
 import com.managepoint.managepoint.exception.AppException;
 import com.managepoint.managepoint.entity.User;
 import com.managepoint.managepoint.pojo.PasswordChangePojo;
@@ -22,15 +23,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public String save(UserPojo userPojo) {
         User user = new User();
-        user.setU_email(userPojo.getU_email());
-        user.setU_name(userPojo.getU_name());
-        user.setU_address(userPojo.getU_address());
-
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        String encryptedPassword = encoder.encode(userPojo.getU_password());
-
-        user.setU_password(encryptedPassword);
-        user.setU_phone(userPojo.getU_phone());
+        user.setEmail(userPojo.getEmail());
+        user.setName(userPojo.getName());
+        user.setAddress(userPojo.getAddress());
+        user.setPassword(PasswordEncoderUtil.getInstance().encode(userPojo.getPassword()));
+        user.setPhone(userPojo.getPhone());
         userRepo.save(user);
         return "created";
     }
@@ -70,9 +67,9 @@ public class UserServiceImpl implements UserService {
 //    }
 
     @Override
-    public UserPojo findByEmail(String u_email) {
+    public UserPojo findByEmail(String email) {
         System.out.println(1);
-        User user = userRepo.findByEmail(u_email)
+        User user = userRepo.findByEmail(email)
                 .orElseThrow(() -> new AppException("Invalid User email", HttpStatus.BAD_REQUEST));
         System.out.println(2);
         return new UserPojo(user);

@@ -20,59 +20,61 @@ import java.util.Collection;
 @DynamicUpdate
 @Entity
 @Table(name="users", uniqueConstraints = {
-        @UniqueConstraint(name = "UNIQUE_mp_user_u_email", columnNames = "u_email")})
+        @UniqueConstraint(name = "UNIQUE_mp_user_email", columnNames = "email")})
 public class User implements UserDetails {
     @Id
     @SequenceGenerator(name = "mp_user_seq_gen", sequenceName = "mp_user_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "mp_user_seq_gen", strategy = GenerationType.SEQUENCE)
-    @Column(name="u_id")
-    private Integer u_id;
+    @Column(name="id")
+    private Integer id;
 
-    @Column(name="u_name",nullable = false)
-    private String u_name;
-    @Column(name = "u_phone",nullable = false,unique = true)
-    private String u_phone;
-    @Column(name = "u_email",nullable = false,unique = true)
-    private String u_email;
-    @Column(name = "u_address",nullable = false)
-    private String u_address;
-    @Column(name = "u_password",nullable = false)
-    private String u_password;
-    @Column(name = "u_image",nullable = true)
-    private String u_image;
+    @Column(name="name",nullable = false)
+    private String name;
+    @Column(name = "phone",nullable = false,unique = true)
+    private String phone;
+    @Column(name = "email",nullable = false,unique = true)
+    private String email;
+    @Column(name = "address",nullable = false)
+    private String address;
+    @Column(name = "password",nullable = false)
+    private String password;
+    @Column(name = "image",nullable = true, columnDefinition = "varchar(255) default '/static/images/logo.png'")
+    private String image;
 
+    @Transient
+    private String imageBase64;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
 
-    @Override
-    public String getPassword() {
-        return this.u_password;
-    }
+//    @Override
+//    public String getPassword() {
+//        return this.password;
+//    }
 
     @Override
     public String getUsername() {
-        return this.u_email;
+        return this.email;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }
