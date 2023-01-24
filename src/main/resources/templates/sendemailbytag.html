@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
 
 <head>
 
@@ -12,7 +13,7 @@
 
     <title>Send Email</title>
 
-    <link rel="stylesheet" href="Send Email by Tag.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/sendemailbytag.css}">
 
 </head>
 
@@ -21,7 +22,7 @@
 
         <div class="logo">
 
-            <img src="../../../../MP_logo.png" height="90" alt="">
+            <img th:src="@{/images/MP_logo.png}" height="90" alt="">
 
             <span>
                 <h1>Manage Point</h1>
