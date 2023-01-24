@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -20,7 +20,7 @@
 <body>
   <div class="flex-top">
     <div class="logo_box">
-      <img src="../../../../MP_logo.png" class="logo" alt="img" />
+      <img th:src="@{/images/MP_logo.png}" class="logo" alt="img" />
     </div>
     <div class="nav_box">
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -45,10 +45,10 @@
             Username
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="">Account Details</a></li>
-            <li><a class="dropdown-item" href="">Notifications</a></li>
-            <li><a class="dropdown-item" href="">Help?</a></li>
-            <li><a class="dropdown-item" href="">Log Out</a></li>
+            <li><a class="dropdown-item" th:href="@{~/dashboard/profile}">Account Details</a></li>
+            <li><a class="dropdown-item" th:href="@{~/dashboard/notification}">Notifications</a></li>
+            <li><a class="dropdown-item" th:href="@{~/dashboard/help}">Help?</a></li>
+            <li><a class="dropdown-item" th:href="@{~/logout}">Log Out</a></li>
           </ul>
         </div>
       </div>
