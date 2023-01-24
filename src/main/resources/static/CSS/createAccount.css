@@ -1,4 +1,7 @@
 /* =========setting up the variables=========== */
+@font-face {
+    font-family: 'outfit';
+    src: url(static/font/Outfit-VariableFont_wght.ttf);}
 :root{
     --primary: #121147;
     --secondary:#fff;
@@ -10,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'outfit';
 }
 /* ======left sude============= */
 #left{
@@ -22,9 +26,11 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 3%;
+    font-family: 'outfit';
 }
 #left h1{
     font-size: 4rem;
+    font-family: 'outfit';
 }
 .social{
     display: flex;
@@ -40,17 +46,21 @@ body{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    font-family: 'outfit';
 }
 #right h1{
     font-size: 3rem;
     color: var(--primary);
     font-weight: bolder;
+    font-family: 'outfit';
+
 }
 #right form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 50%;
+    font-family: 'outfit';
 }
 /* ---- for login page form ---- */
 #right #loginform{
@@ -85,6 +95,7 @@ button{
     border-radius: 10px;
     font-size: 1.3rem;
     padding: 2%;
+    font-family: 'outfit';
 }
 p{
     color: var(--light-black);
