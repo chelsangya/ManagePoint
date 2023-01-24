@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+  <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!--      for nav-->
+      <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+              integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"
+      />
+    <link
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewBox" content="width=device-width,initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/dashboard.css}" } />
+      <link rel="stylesheet" type="text/css" th:href="@{/CSS/navigationbar.css}" } />
+  </head>
+  <body>
+<!--    <div class="flex-top">-->
+<!--      <div class="logo_box">-->
+<!--        <img src="logo.png" class="logo" alt="img" />-->
+<!--      </div>-->
+<!--      <div class="nav_box">-->
+<!--        <div-->
+<!--          class="btn-group"-->
+<!--          role="group"-->
+<!--          aria-label="Button group with nested dropdown"-->
+<!--        >-->
+<!--          <button type="button"  class="btn btn">-->
+<!--            Broadcast-->
+<!--          </button>-->
+<!--          <button type="button"  class="btn btn">-->
+<!--            Subscribers-->
+<!--          </button>-->
+<!--          <button type="button"  class="btn btn">-->
+<!--            Learn-->
+<!--          </button>-->
+
+<!--          <div class="btn-group" role="group">-->
+<!--            <button-->
+<!--              type="button"-->
+<!--              class="btn btn dropdown-toggle"-->
+<!--              data-bs-toggle="dropdown"-->
+<!--              aria-expanded="false"-->
+<!--            >-->
+<!--              <svg-->
+<!--                xmlns="http://www.w3.org/2000/svg"-->
+<!--                width="30%"-->
+<!--                height="100%"-->
+<!--                fill="currentColor"-->
+<!--                class="bi bi-person-circle"-->
+<!--                viewBox="0 0 16 16"-->
+<!--              >-->
+<!--                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />-->
+<!--                <path-->
+<!--                  fill-rule="evenodd"-->
+<!--                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"-->
+<!--                />-->
+<!--              </svg>-->
+<!--              Username-->
+<!--            </button>-->
+<!--            <ul class="dropdown-menu">-->
+<!--              <li><a class="dropdown-item" th:href="@{~/dashboard/profile}">Account Details</a></li>-->
+<!--              <li><a class="dropdown-item" th:href="@{~/dashboard/notifications}">Notifications</a></li>-->
+<!--              <li><a class="dropdown-item" th:href="@{~/dashboard/help}">Help?</a></li>-->
+<!--              <li><a class="dropdown-item" th:href="@{~/logout}">Log Out</a></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<header>
+<div class=flex-top th:replace="~{fragments/navigationbar.html :: navbar}"> </div>
+</header>
+    <div
+      class="line"
+    >
+      
+    </div>
+
+    <p class="fw-bold">
+        Channel Analytics
+    </p>
+
+    <div class="flex-center">
+      <div class="flex-box">
+        <p class="fs-4" >Emails Sent</p>
+      </div>
+      <div class="flex-box">
+        <p class="fs-4" >Subscribers</p>
+      </div>
+      <div class="flex-box">
+        <p class="fs-4" >Growth</p>
+      </div>
+    </div>
+
+
+    <div class="flex_main">
+        <div class="flex-graph"
+
+        >
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+            <script>
+                var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+            new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+                }, { 
+                    data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                    borderColor: "green",
+                    fill: false
+                }, { 
+                    data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                    borderColor: "blue",
+                    fill: false
+                }]
+            },
+            options: {
+                legend: {display: false}
+            }
+            });
+            </script>
+  
+        </div>
+        <div class="flex-right">
+            <div class="d-grid gap-2">
+            <button class="btn btn-light" type="button">
+                Subscribers
+             </button>
+            
+            <button class="btn btn-light" type="button">
+                 Emails Sent
+            </button>
+            
+            </div>
+        </div>
+
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+<script>
+    const navToggle = document.querySelector("#menu-bar");
+    const link = document.querySelector(".links");
+
+    navToggle.addEventListener("click", function () {
+        navToggle.classList.toggle("fa-times");
+        link.classList.toggle("show_nav");
+    });
+</script>
+  </body>
+</html>

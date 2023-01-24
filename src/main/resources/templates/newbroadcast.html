@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Broadcast</title>
+    <script type="text/javascript" th:src="@{/javascript/navigationbar.js}"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/CSS/newbroadcast.css}">
+
+    <link type="text/css" th:href="@{/node_modules/froala-editor/css/froala_editor.pkgd.min.css}" rel="stylesheet"  />
+    <script type="text/javascript" th:src="@{/node_modules/froala-editor/js/froala_editor.pkgd.min.js}"></script>
+</head>
+
+<body>
+<navigation-bar></navigation-bar>
+
+<div class="texteditor">
+
+    <div id="froala">
+
+    </div>
+    <button>Submit</button>
+</div>
+</body>
+<script type="text/javascript" th:src="@{/node_modules/froala-editor/js/froala_editor.pkgd.min.js}"></script>
+<script>
+    var editor = new FroalaEditor("#froala");
+</script>
+
+</html>
