@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account details</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
     <script th:src="@{/javascript/navigationbar.js}" defer>   </script>
     <link rel="stylesheet" th:href="@{/css/accountdetail.css}">
+    <link rel="stylesheet" th:href="@{/css/navigationbar.css}">
 </head>
 <body>
-<navigation-bar></navigation-bar>
+<header>
+    <div class=flex-top th:replace="~{fragments/navigationbar.html :: navbar}"> </div>
+</header>
 <section id="body">
     <div class="left">
         <a th:href="~{/user/accountDetails}">Account Details</a>
@@ -83,4 +93,13 @@
     </div>
 </section>
 </body>
+<script>
+    const navToggle = document.querySelector("#menu-bar");
+    const link = document.querySelector(".links");
+
+    navToggle.addEventListener("click", function () {
+        navToggle.classList.toggle("fa-times");
+        link.classList.toggle("show_nav");
+    });
+</script>
 </html>
