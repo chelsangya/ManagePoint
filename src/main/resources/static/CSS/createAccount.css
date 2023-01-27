@@ -30,6 +30,7 @@ body{
     display: flex;
     justify-content: space-around;
     font-size: 3rem;
+    width: 90%;
 }
 /* ======left side completed======== */
 /* ======right side ======== */
@@ -66,6 +67,9 @@ input{
     font-size: 1.4rem;
     padding: 2%;
 }
+input:focus-visible{
+    outline: none;
+}
 form span{
     height: 15%;
     display: flex;
@@ -85,6 +89,7 @@ button{
     border-radius: 10px;
     font-size: 1.3rem;
     padding: 2%;
+    margin-top: 10%;
 }
 p{
     color: var(--light-black);
