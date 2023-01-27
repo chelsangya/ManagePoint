@@ -6,12 +6,12 @@ form {
     border-radius: 5px;
   }
   
-  /* label {
+  label {
     font-weight: bold;
     margin-right: 10px;
   }
   
-  input[type="text"],
+  /* input[type="text"],
   input[type="email"],
   textarea {
     width: 90%;
