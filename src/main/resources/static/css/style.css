@@ -1,10 +1,14 @@
+@font-face {
+  font-family: 'outfit';
+  src: url(static/font/Outfit-VariableFont_wght.ttf);}
 body {
-  font-family: "Poppins";
+  font-family: "outfit";
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .header2 {
+  font-family: "outfit";
   width: 80%;
   height: 100%;
   display: flex;
@@ -22,6 +26,7 @@ body {
 }
 
 .signup-wrapper {
+  font-family: "outfit";
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -30,6 +35,7 @@ body {
   min-height: 70vh;
 }
 .right_login {
+  font-family: "outfit";
   background-color: #ffffff;
   height: 70vh;
   width: 50%;
@@ -37,7 +43,7 @@ body {
 }
 .right_login h1 {
   color: #121147;
-  font-family: Poppins;
+  font-family: "outfit";
   font-size: 3rem;
   font-weight: bolder;
 }
@@ -58,7 +64,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.015em;
   text-align: left;
-  font-family: Poppins;
+  font-family: "outfit";
 }
 /* .summitbutton {
   width: 50%;
@@ -79,7 +85,7 @@ body {
   height: 50px;
   background: #121147;
   border-radius: 8px;
-  font-family: "Poppins";
+  font-family: "outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 19px;
@@ -88,7 +94,7 @@ body {
   color: #f9fbff;
 }
 form p{
-  font-family: Poppins;
+  font-family: "outfit";
   font-size: 1.4rem;
   color: #121147;
 font-weight: 400;
@@ -101,7 +107,7 @@ text-align: left;
 .header2 h2{
   width: 50%;
   height: 101px;
-  font-family: 'Poppins';
+  font-family: "outfit";
 font-style: normal;
 font-weight: 600;
 font-size: 40px;
