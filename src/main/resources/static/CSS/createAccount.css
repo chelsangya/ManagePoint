@@ -36,6 +36,8 @@ body{
     display: flex;
     justify-content: space-around;
     font-size: 3rem;
+    border: 1px solid red;
+    width: 90%;
 }
 /* ======left side completed======== */
 /* ======right side ======== */
