@@ -20,7 +20,30 @@ function ekUpload(){
     }
   }
 
-  
+  function fileDragHover(e) {
+    var fileDrag = document.getElementById('file-drag');
+
+    e.stopPropagation();
+    e.preventDefault();
+
+    fileDrag.className = (e.type === 'dragover' ? 'hover' : 'modal-body file-upload');
+  }
+
+  function fileSelectHandler(e) {
+    var files = e.target.files || e.dataTransfer.files;
+
+    fileDragHover(e);
+
+    for (var i = 0, f; f = files[i]; i++) {
+      parseFile(f);
+      uploadFile(f);
+    }
+  }
+
+  function output(msg) {
+    var m = document.getElementById('messages');
+    m.innerHTML = msg;
+  }
 
   function parseFile(file) {
 
