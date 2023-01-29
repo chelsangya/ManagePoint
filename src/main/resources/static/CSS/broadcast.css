@@ -1,0 +1,240 @@
+:root {
+  --primary: #121147;
+  --secondary: #fff;
+  --third: #000;
+}
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  background: var(--primary);
+}
+.upper-btns {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0% 5%;
+
+  background: var(--primary);
+}
+.upper-btns button {
+  padding: 1%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin: 2%;
+
+
+  
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+.upper-btns button:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: ease 0.2s;
+}
+.upper-btns .active{
+  
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+i {
+  color: var(--primary);
+  margin-right: 2px;
+  font-size: 1.5rem;
+  background: var(--secondary);
+  border-radius: 55px;
+}
+.display-area {
+  width: 90%;
+  min-height: 50vh;
+  margin: 3%;
+  border-radius: 10px;
+}
+/* table */
+.form-table {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 2% 0;
+}
+.form-table h1{
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  margin: 1.2em auto;
+  width: 100%;
+  word-wrap: break-word;
+  background: var(--secondary);
+  font-size: 1.3rem;
+
+}
+
+thead {
+  background-color: var(--secondary);
+  text-align: left;
+  border: 2px solid var(--primary);
+}
+thead tr th{
+  border: 3px solid var(--primary);
+  padding: 10px 5px;
+  text-align: left;
+  background-color: var(--primary);
+  color: white;
+}
+
+td,
+th {
+  text-align: left;
+  padding-left: 0.2em;
+  overflow: auto;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+td {
+  padding-bottom: 0.5em;
+}
+
+tbody tr:hover{
+  background-color: #ddd;
+  transition: ease-in 0.3s;
+}
+ tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+@media only screen and (max-width: 760px), (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  thead,
+  tbody,
+  .table,
+  .table-head,
+  .table-data,
+  .table-row {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;), for accesibility */
+  thead .table-row {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-row {
+    border: 1px solid var(--primary);
+    padding-bottom: 1em;
+  }
+
+  /* Behave like a row */
+  .table-data {
+    border: none;
+    border-bottom: 2px solid var(--secondary);
+    position: relative;
+    padding: 0.4em;
+    padding-left: 50%;
+    margin-bottom: 0.5em;
+  }
+
+  /* Now like a table header */
+  .table-data:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /**
+ * Label the message and comments table using CSS
+ * generated content. The first td element is the
+ * 'select_all_checkbox' so we set its content to ''
+ */
+  .comments td:nth-of-type(1):before {
+    content: "";
+  }
+  .comments td:nth-of-type(2):before {
+    content: "Date";
+  }
+  .comments td:nth-of-type(3):before {
+    content: "Approved";
+  }
+  .comments td:nth-of-type(4):before {
+    content: "Post Title";
+  }
+  .comments td:nth-of-type(5):before {
+    content: "Name";
+  }
+  .comments td:nth-of-type(6):before {
+    content: "Email";
+  }
+  .comments td:nth-of-type(7) {
+    border: none;
+  }
+
+  /**
+ * We give the link to read message and
+ * manage comment some visual enhancements
+ */
+  .comments td:nth-of-type(7),
+  .messages td:nth-of-type(6) {
+    padding: 8px 10px;
+    text-align: center;
+  }
+  .comments td:nth-of-type(7) a,
+  .messages td:nth-of-type(6) a {
+    display: block;
+    padding: 8px 10px;
+    background-color: var(--secondary);
+  }
+
+  /**
+ * Remove the table data which contains the
+ * checkboxes.
+ */
+  .table-row > td {
+    border: none;
+  }
+
+  .table-row > td > * {
+    display: none;
+  }
+}
+
+.submit-input {
+  background-color: var(--primary);
+  border: 0;
+  color: var(--secondary);
+  border-radius: 5px;
+  font-family: "Trebuchet Ms", serif;
+  margin: 0 auto;
+  padding: 0.5em;
+  width: 30%;
+  display: block;
+}
+.submit-input:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 3px var(--primary);
+  font-weight: bold;
+}
+
+.highlighted {
+  background-color: #bbbbbb;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
