@@ -13,6 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UserPojo {
     @NotEmpty(message = "Name can't be empty")
+    private Integer id;
+    @NotEmpty(message = "Name can't be empty")
     private String name;
     @NotEmpty(message = "Email can't be empty")
     private String email;

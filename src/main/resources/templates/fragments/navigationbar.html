@@ -1,5 +1,13 @@
 
 <div th:fragment="navbar">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/navigationbar.css}" } />
     <a href="#" class="logo"><img  type="image" th:src="@{/images/MP_logo.png}" alt="logo" /></a>
     <div id="menu-bar" class="fas fa-bars"></div>
     <div class="links">
@@ -16,4 +24,4 @@
     </div>
 </div>
 
-<script th:src="@{/fragments/navigation.js}"};
+<script th:src="@{/fragments/navigation.js}"></script>
