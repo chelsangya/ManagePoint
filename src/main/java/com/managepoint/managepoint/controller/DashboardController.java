@@ -1,7 +1,9 @@
 package com.managepoint.managepoint.controller;
 
+import com.managepoint.managepoint.pojo.UserPojo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -27,7 +29,10 @@ public class DashboardController {
         return "learn";
     }
     @GetMapping("/profile")
-    public String getProfile(){return "accountdetails";}
+    public String getProfile(Model model){
+        model.addAttribute("user",new UserPojo());
+        return "accountdetails";
+    }
     @GetMapping("/notification")
     public String getNotification(){return "notifications";}
     @GetMapping("/newsletter")
