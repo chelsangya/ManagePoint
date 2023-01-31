@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account details</title>
+    <script src="./navigationbar.js" defer>   </script>
+    <link rel="stylesheet" href="./css/notification.css">
+    <link rel="stylesheet" href="./css/accountdetail.css">
+  </head>
+  <body>
+    <navigation-bar></navigation-bar>
+    <section id="body">
+      <div class="left">
+        <a href="./accountdetails.html">Account Details</a>
+        <a href="./notification.html">Notifications</a>
+        <a href="./faq.html">Help?</a>
+        <a href="./login.html">Logout</a>
+      </div>
+      
+      <div class="right">
+        <div class="upper_part">
+          <h1>Account Details</h1>
+          
+          <div class="profile-info">
+            <img src="./assets/MP_logo.png" alt="" srcset="">
+            <div class="detail">
+                <h3>Profile Picture</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, distinctio?</p>
+            </div>
+          </div>
+          <form action="" method="post">
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              placeholder="Edit Full Name"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Edit Email Address"
+            />
+           
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Edit Address"
+              />
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Edit Phone Number"
+              />
+           
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Edit Password"
+            />
+          </form>
+        </div>
+
+        <div class="bottom-btn">
+          <button>Cancel</button>
+          <button>Save Changes</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
