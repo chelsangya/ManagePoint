@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/createAccount.css" />
+    <link rel="stylesheet" th:href="@{/CSS/global.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/createAccount.css}" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -22,7 +22,7 @@
   <body>
     <section id="left">
       <div class="top">
-        <img src="./assets/MP_logo.png" alt="managepoint logo" />
+        <img th:src="@{/images/MP_logo.png}" alt="managepoint logo" />
         <h1>Manage Point</h1>
       </div>
       <div class="social">
@@ -35,18 +35,20 @@
 
     <section id="right">
       <h1>Create Account</h1>
-      <form action="" method="post">
+      <form class="signup" th:method="post" th:action="@{/user/save}" th:object="${user}">
         <input
           type="text"
           name="fullname"
           id="fullname"
           placeholder="Full Name"
+          required th:field="*{name}"
         />
         <input
           type="email"
           name="email"
           id="email"
           placeholder="Email Address"
+          required th:field="*{email}"
         />
         <span>
           <input
@@ -54,12 +56,14 @@
             name="address"
             id="address"
             placeholder="Address"
+            required th:field="*{address}"
           />
           <input
             type="tel"
             name="phone"
             id="phone"
             placeholder="Phone Number"
+            required th:field="*{phone}"
           />
         </span>
         <input
@@ -67,6 +71,7 @@
           name="password"
           id="password"
           placeholder="Password"
+          required th:field="*{password}"
         />
         <input
           type="password"
@@ -76,26 +81,26 @@
         />
       </form>
       <button type="submit">Create Account</button>
-      <p>Already have an account? <a href="./login.html">Login</a></p>
-      <h6> OR</h6>
-      <div class="googlesignin">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <p>Already have an account? <a th:href="@{~/login}">Login</a></p>
+<!--      <h6> OR</h6>-->
+<!--      <div class="googlesignin">-->
+<!--        <div class="g-signin2" data-onsuccess="onSignIn"></div>-->
 
-        <script
-          src="https://apis.google.com/js/platform.js"
-          async
-          defer
-        ></script>
-        <script>
-          function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-            console.log("Name: " + profile.getName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-          }
-        </script>
-      </div>
+<!--        <script-->
+<!--          src="https://apis.google.com/js/platform.js"-->
+<!--          async-->
+<!--          defer-->
+<!--        ></script>-->
+<!--        <script>-->
+<!--          function onSignIn(googleUser) {-->
+<!--            var profile = googleUser.getBasicProfile();-->
+<!--            console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.-->
+<!--            console.log("Name: " + profile.getName());-->
+<!--            console.log("Image URL: " + profile.getImageUrl());-->
+<!--            console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.-->
+<!--          }-->
+<!--        </script>-->
+<!--      </div>-->
     </section>
   </body>
 </html>
