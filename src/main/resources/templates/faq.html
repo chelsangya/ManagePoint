@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Notification</title>
-  <script src="./navigationbar.js" defer>   </script>
+  <script type="text/javascript" type="text/javascript" th:src="@{/javascript/navigationbar.js}" defer>
+  </script>
 
-  <link rel="stylesheet" href="./css/notification.css" />
-  <link rel="stylesheet" href="./css/faq.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/CSS/notification.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/CSS/faq.css}">
 </head>
 
 <body>
   <navigation-bar></navigation-bar>
   <section id="body">
     <div class="left">
-      <a href="./accountdetails.html">Account Details</a>
-      <a href="./notification.html">Notifications</a>
-      <a href="./faq.html">Help?</a>
-      <a href="./login.html">Logout</a>
+      <a th:href="@{~/dashboard/profile}">Account Details</a>
+      <a th:href="@{~/dashboard/notification}">Notifications</a>
+      <a th:href="@{~dashboard/faq}">Help?</a>
+      <a th:href="@{~/logout}">Logout</a>
     </div>
     <div class="right">
       <div class="upper_part">
