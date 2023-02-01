@@ -23,10 +23,18 @@
         <a href="#" class="logo"><img th:src="@{/images/MP_logo.png}" alt="logo" />Manage Point</a>
         <div id="menu-bar" class="fas fa-bars"></div>
         <div class="links">
-            <a th:href="@{~/user/keyfeatures}">Key Features</a>
-            <a th:href="@{~/user/resources}">Resources</a>
-            <a th:href="@{~/login}">Login</a>
-            <a th:href="@{~/user/create}" class="signup">Sign Up</a>
+            <a th:href="@{~/user/keyfeatures}">
+                Key Features
+            </a>
+            <a th:href="@{~/user/resources}">
+                Resources
+            </a>
+            <a th:href="@{~/login}">
+                Login
+            </a>
+            <a th:href="@{~/user/create}" class="signup">
+                Sign Up
+            </a>
         </div>
     </header>
 
@@ -68,30 +76,49 @@
         <div class="footer_link">
             <h3>Links</h3>
 
-            <a href="#">Home</a>
+            <a th:href="@{~/index}">
+                Home
+            </a>
 
-            <a href="#">Service</a>
+            <a th:href="@{~/user/resources}">
+                Resources
+            </a>
 
-            <a href="#">Feature</a>
+            <a th:href="@{~/login}">
+                Login
+            </a>
 
-            <a href="#">Contacts</a>
+            <a th:href="@{~/user/create}">
+                Signup
+            </a>
+
         </div>
 
         <div class="column_footer">
             <div class="social_media">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-facebook-f">
 
-                <i class="fa-brands fa-instagram"></i>
+                </i>
 
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram">
 
-                <i class="fa-brands fa-whatsapp"></i>
+                </i>
+
+                <i class="fa-brands fa-twitter">
+
+                </i>
+
+                <i class="fa-brands fa-whatsapp">
+
+                </i>
             </div>
 
             <img th:src="@{/images/MP_logo.png}" alt="" />
         </div>
     </footer>
 </body>
-<script type="text/javascript" th:src="@{/javascript/script.js}"></script>
+<script type="text/javascript" th:src="@{/javascript/script.js}">
+
+</script>
 
 </html>
