@@ -14,7 +14,8 @@
 </head>
 
 <body>
-  <navigation-bar></navigation-bar>
+<header th:replace="fragments/navbar :: navbar"
+        th:with="profileName=${name}"/>
   <section id="body">
     <div class="left">
       <a th:href="@{~/dashboard/profile}">Account Details</a>

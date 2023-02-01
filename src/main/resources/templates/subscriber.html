@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <navigation-bar></navigation-bar>
+<header th:replace="fragments/navbar :: navbar"
+        th:with="profileName=${name}"/>
     <div class="upper-part">
 
         <select id="subscriber_type" class="button">

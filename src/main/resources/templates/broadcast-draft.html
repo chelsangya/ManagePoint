@@ -14,7 +14,8 @@
   
 </head>
 <body>
-    <navigation-bar></navigation-bar>
+<header th:replace="fragments/navbar :: navbar"
+		th:with="profileName=${name}"/>
     <div class="upper-btns">
         <button onClick="window.location.href='broadcast.html';">All Broadcast</button>
         <button class="active" onClick="window.location.href='broadcast-draft.html';">Draft</button>

@@ -11,7 +11,8 @@
 
 </head>
 <body>
-    <navigation-bar></navigation-bar>
+<header th:replace="fragments/navbar :: navbar"
+        th:with="profileName=${name}"/>
     <section id="main">
         <h1>Creator analytics</h1>
         <div class="counter">

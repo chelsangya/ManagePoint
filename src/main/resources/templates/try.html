@@ -51,6 +51,7 @@ placeholder of input isn't shown
         <!-- The label -->
         <label class="floating-label__label">Placeholder</label>
     </div>
-    <navigation-bar></navigation-bar>
+    <header th:replace="fragments/navbar :: navbar"
+            th:with="profileName=${name}"/>
 </body>
 </html>
