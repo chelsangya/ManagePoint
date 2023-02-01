@@ -3,13 +3,13 @@ package com.managepoint.managepoint.service.impl;
 import com.managepoint.managepoint.config.PasswordEncoderUtil;
 import com.managepoint.managepoint.exception.AppException;
 import com.managepoint.managepoint.entity.User;
-import com.managepoint.managepoint.pojo.PasswordChangePojo;
 import com.managepoint.managepoint.pojo.UserPojo;
 import com.managepoint.managepoint.repo.UserRepo;
 import com.managepoint.managepoint.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -73,5 +73,10 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new AppException("Invalid User email", HttpStatus.BAD_REQUEST));
         System.out.println(2);
         return new UserPojo(user);
+    }
+    public Optional<User> getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+        return userRepo.findByName(username);
     }
 }
