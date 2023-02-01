@@ -16,12 +16,12 @@ import java.util.Optional;
 @RequestMapping("/dashboard")
 public class DashboardController {
     UserService userService;
-    @GetMapping("")
-    public String getDashboard(Model model){
-        Optional<User> user = userService.getCurrentUser();
-        model.addAttribute("profileName", user.get().getName());
-        return "dashboard";
-    }
+//    @GetMapping("")
+//    public String getDashboard(Model model){
+//        Optional<User> user = userService.getCurrentUser();
+//        model.addAttribute("profileName", user.get().getName());
+//        return "dashboard";
+//    }
 
     @GetMapping("/broadcast")
     public String getBroadcast() {
