@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Broadcast</title>
-    <script src="./navigationbar.js"></script>
-    <link rel="stylesheet" href="./css/newbroadcast.css">
+    <script type="text/javascript" type="text/javascript" th:src="@{/javascript/navigationbar.js}" defer>
+    </script>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/newbroadcast.css}" />
 
-    <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+    <link type="text/css" th:href="@{node_modules/froala-editor/css/froala_editor.pkgd.min.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{node_modules/froala-editor/js/froala_editor.pkgd.min.js}"></script>
 </head>
 
 <body>
@@ -26,7 +27,8 @@
         <button>Submit</button>
     </div>
 </body>
-<script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+<script type="text/javascript" th:src="@{node_modules/froala-editor/js/froala_editor.pkgd.min.js}">
+</script>
 <script>
     var editor = new FroalaEditor("#froala");
 </script>
