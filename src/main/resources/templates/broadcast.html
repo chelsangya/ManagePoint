@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broadcast</title>
-	<script type="text/javascript" type="text/javascript" th:src="@{/javascript/navigationbar.js}">   </script>
+    <title>
+		Broadcast
+	</title>
+	<script type="text/javascript" type="text/javascript" th:src="@{/javascript/navigationbar.js}">
+	</script>
     <link rel="stylesheet" type="text/css" th:href="@{/CSS/broadcast.css}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,13 +19,24 @@
 <header th:replace="fragments/navbar :: navbar"
 		th:with="profileName=${name}"/>
     <div class="upper-btns">
-        <button class="active" onClick="window.location.href='broadcast.html';">All Broadcast</button>
-        <button onClick="window.location.href='broadcast-draft.html';">Draft</button>
-        <button onClick="window.location.href='newbroadcast.html';"><i class="fa-solid fa-circle-plus"></i>New Broadcast</button>
+        <button class="active" onClick="window.location.href='broadcast.html';">
+			All Broadcast
+		</button>
+        <button onClick="window.location.href='broadcast-draft.html';">
+			Draft
+		</button>
+        <button onClick="window.location.href='newbroadcast.html';">
+			<i class="fa-solid fa-circle-plus">
+
+			</i>
+			New Broadcast
+		</button>
     </div>
     <div class="display-area">
         <form action="" method="post" class="form-table">
-          <h1>All broadcast</h1>
+          <h1>
+			  All broadcast
+		  </h1>
 			<table class="table comments">
 				<thead>
 					<tr class="table-row">
@@ -34,12 +48,24 @@
 							>
 							<input type="checkbox" id="select_all_checkboxes" />
 						</th>
-						<th class="table-head">Date</th>
-						<th class="table-head">Approved</th>
-						<th class="table-head">Post Title</th>
-						<th class="table-head">Name</th>
-						<th class="table-head">Email</th>
-						<th class="table-head">Read Comment</th>
+						<th class="table-head">
+							Date
+						</th>
+						<th class="table-head">
+							Approved
+						</th>
+						<th class="table-head">
+							Post Title
+						</th>
+						<th class="table-head">
+							Name
+						</th>
+						<th class="table-head">
+							Email
+						</th>
+						<th class="table-head">
+							Read Comment
+						</th>
 					</tr>
 				</thead>
 
@@ -47,7 +73,9 @@
 					<tr class="table-row">
 						<td class="table-data">
 							<label for="ferranMessage" class="visuallyhidden"
-								>Select message</label
+								>
+								Select message
+							</label
 							>
 							<input
 								id="ferranMessage"
@@ -55,20 +83,35 @@
 								class="delete_checkbox"
 							/>
 						</td>
-						<td class="table-data">2021-01-09 11:22:11</td>
-						<td class="table-data">No</td>
-						<td class="table-data">This is a test post</td>
-						<td class="table-data">Ferran</td>
-						<td class="table-data">ferrantorres@yahoo.com</td>
 						<td class="table-data">
-							<a>View Comment</a>
+							2021-01-09 11:22:11
+						</td>
+						<td class="table-data">
+
+							No
+						</td>
+						<td class="table-data">
+							This is a test post
+						</td>
+						<td class="table-data">
+							Ferran
+						</td>
+						<td class="table-data">
+							ferrantorres@yahoo.com
+						</td>
+						<td class="table-data">
+							<a>
+								View Comment
+							</a>
 						</td>
 					</tr>
 
 					<tr class="table-row">
 						<td class="table-data">
 							<label for="marquezMessage" class="visuallyhidden"
-								>Select message</label
+								>
+								Select message
+							</label
 							>
 							<input
 								id="marquezMessage"
@@ -76,22 +119,34 @@
 								class="delete_checkbox"
 							/>
 						</td>
-						<td class="table-data">2021-01-09 11:17:57</td>
-						<td class="table-data">No</td>
+						<td class="table-data">
+							2021-01-09 11:17:57
+						</td>
+						<td class="table-data">
+							No
+						</td>
 						<td class="table-data">
 							Introduction to CSS Block Formatting Context
 						</td>
-						<td class="table-data">Marquez</td>
-						<td class="table-data">marquez@gmail.com</td>
 						<td class="table-data">
-							<a>View Comment</a>
+							Marquez
+						</td>
+						<td class="table-data">
+							marquez@gmail.com
+						</td>
+						<td class="table-data">
+							<a>
+								View Comment
+							</a>
 						</td>
 					</tr>
 
 					<tr class="table-row">
 						<td class="table-data">
 							<label for="johnstonMessage" class="visuallyhidden"
-								>Select message</label
+								>
+								Select message
+							</label
 							>
 							<input
 								id="johnstonMessage"
@@ -99,15 +154,25 @@
 								class="delete_checkbox"
 							/>
 						</td>
-						<td class="table-data">2021-01-09 11:17:13</td>
-						<td class="table-data">No</td>
+						<td class="table-data">
+							2021-01-09 11:17:13
+						</td>
+						<td class="table-data">
+							No
+						</td>
 						<td class="table-data">
 							Introduction to CSS Block Formatting Context
 						</td>
-						<td class="table-data">Johnston</td>
-						<td class="table-data">littlejohn@yaho.com</td>
 						<td class="table-data">
-							<a>View Comment</a>
+							Johnston
+						</td>
+						<td class="table-data">
+							littlejohn@yaho.com
+						</td>
+						<td class="table-data">
+							<a>
+								View Comment
+							</a>
 						</td>
 					</tr>
 				</tbody>
@@ -121,6 +186,8 @@
 			</form>
 
     </div>
-    <script type="text/javascript" th:src="@{/javascript/bulkaction.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/bulkaction.js}">
+
+	</script>
 </body>
 </html>

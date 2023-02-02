@@ -25,18 +25,23 @@ public class DashboardController {
 
     @GetMapping("/broadcast")
     public String getBroadcast() {
+
         return "broadcast";
     }
 
     @GetMapping("/subscriber")
     public String getGallery() {
+
         return "subscriber";
     }
     @GetMapping("/help")
-    public  String getHelp(){return "faq";}
+    public  String getHelp(){
+        return "faq";
+    }
 
     @GetMapping("/learn")
     public String getBlogs() {
+
         return "learn";
     }
     @GetMapping("/profile")
