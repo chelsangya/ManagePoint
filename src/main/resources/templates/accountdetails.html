@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account details</title>
-    <script type="text/javascript" th:src="@{/javascript/navigationbar.js}" defer>   </script>
+    <title>
+      Account details
+    </title>
+    <script type="text/javascript" th:src="@{/javascript/navigationbar.js}" defer>
+  </script>
     <link rel="stylesheet" type="text/css" th:href="@{/CSS/notification.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/CSS/accountdetail.css}">
   </head>
@@ -14,10 +17,18 @@
           th:with="profileName=${name}"/>
     <section id="body">
       <div class="left">
-        <a th:href="@{~/dashboard/profile}">Account Details</a>
-        <a th:href="@{~/dashboard/notification}">Notifications</a>
-        <a th:href="@{~/dashboard/faq}">Help?</a>
-        <a th:href="@{~/logout}">Logout</a>
+        <a th:href="@{~/dashboard/profile}">
+          Account Details
+        </a>
+        <a th:href="@{~/dashboard/notification}">
+          Notifications
+        </a>
+        <a th:href="@{~/dashboard/faq}">
+          Help?
+        </a>
+        <a th:href="@{~/logout}">
+          Logout
+        </a>
       </div>
       
       <div class="right">
@@ -27,7 +38,9 @@
             <img th:src="@{/images/MP_logo.png}" alt="" srcset="">
             <div class="detail">
                 <h3>Profile Picture</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, distinctio?</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, distinctio?
+                </p>
             </div>
           </div>
           <form class="signup" th:method="post" th:action="@{/user/save}" th:object="${user}">
@@ -77,8 +90,12 @@
         </div>
 
         <div class="bottom-btn">
-          <button>Cancel</button>
-          <button>Save Changes</button>
+          <button>
+            Cancel
+          </button>
+          <button>
+            Save Changes
+          </button>
         </div>
       </div>
     </section>

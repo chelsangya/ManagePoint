@@ -15,7 +15,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @RequestMapping("/dashboard")
 public class DashboardController {
-    UserService userService;
+//    UserService userService;
 //    @GetMapping("")
 //    public String getDashboard(Model model){
 //        Optional<User> user = userService.getCurrentUser();
@@ -25,18 +25,23 @@ public class DashboardController {
 
     @GetMapping("/broadcast")
     public String getBroadcast() {
+
         return "broadcast";
     }
 
     @GetMapping("/subscriber")
     public String getGallery() {
+
         return "subscriber";
     }
     @GetMapping("/help")
-    public  String getHelp(){return "help";}
+    public  String getHelp(){
+        return "faq";
+    }
 
     @GetMapping("/learn")
     public String getBlogs() {
+
         return "learn";
     }
     @GetMapping("/profile")
@@ -45,9 +50,7 @@ public class DashboardController {
         return "accountdetails";
     }
     @GetMapping("/notification")
-    public String getNotification(){return "notifications";}
-    @GetMapping("/newsletter")
-    public String getNewsletter(){return "newsletter";}
+    public String getNotification(){return "notification";}
     @GetMapping("/createtag")
     public String getCreateTag(){return "create_tag";}
 }

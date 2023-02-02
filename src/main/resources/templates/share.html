@@ -4,21 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Share Article</title>
+    <title>
+      Share Article
+    </title>
 
     <!--JSPDF CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     
   </head>
   <body>
-    <p>don't print this to pdf</p>
+    <p>
+      don't print this to pdf
+    </p>
     <div id="pdf">
-      <p style="color: red">print this to pdf</p>
+      <p style="color: red">
+        print this to pdf
+      </p>
     </div>
-    <button onclick="printDiv('pdf','Title')">print div</button>
+    <button onclick="printDiv('pdf','Title')">
+      print div
+    </button>
 
-    <button onclick="saveDiv('pdf','Title')">save div as pdf</button>
+    <button onclick="saveDiv('pdf','Title')">
+      save div as pdf
+    </button>
   </body>
 
-  <script th:src="@{/javascript/share.js}"></script>
+  <script th:src="@{/javascript/share.js}">
+
+  </script>
 </html>
