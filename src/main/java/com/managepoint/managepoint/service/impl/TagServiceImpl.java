@@ -22,13 +22,13 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public Tag fetchById(Integer id) {
-        return (Tag) tagRepo.findById(id).orElseThrow(()->new RuntimeException("Not Found"));
+        return tagRepo.findById(id).orElseThrow(()->new RuntimeException("Not Found"));
     }
 
 
     @Override
     public Tag fetchByName(String name) {
-        return (Tag) tagRepo.findByName(name).orElseThrow(()->new RuntimeException("Not Found"));
+        return tagRepo.findByName(name).orElseThrow(()->new RuntimeException("Not Found"));
     }
 
     @Override

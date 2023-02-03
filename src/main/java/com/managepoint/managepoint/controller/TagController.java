@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor //creates the constructor with all required arguments
-@RequestMapping()
+@RequestMapping("/dashboard/tag")
 
 public class TagController extends BaseController {
     private final TagService tagService;
-    @GetMapping("/tag/create")
+    @GetMapping("/create")
     public String createtag(Model model) {
         model.addAttribute("tag", new TagPojo());
         return "subscriber";
     }
 
-    @PostMapping("/tag/save")
+    @PostMapping("/save")
     public String saveTag(@Valid TagPojo tagpojo) {
         tagService.save(tagpojo);
         return "redirect:/subscriber";
