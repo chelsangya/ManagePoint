@@ -7,16 +7,21 @@ import com.managepoint.managepoint.exception.AppException;
 import com.managepoint.managepoint.pojo.SubscriberPojo;
 import com.managepoint.managepoint.pojo.UserPojo;
 import com.managepoint.managepoint.repo.SubscriberRepo;
+import com.managepoint.managepoint.repo.UserRepo;
 import com.managepoint.managepoint.service.SubscriberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class SubscriberServiceImpl implements SubscriberService {
     SubscriberRepo subscriberRepo;
+    private final UserRepo userRepo;
+
     @Override
     public String save(SubscriberPojo subscriberPojo) {
         Subscriber subscriber = new Subscriber();
@@ -46,5 +51,14 @@ public class SubscriberServiceImpl implements SubscriberService {
         Subscriber subscriber= subscriberRepo.findByEmail(email)
                 .orElseThrow(() -> new AppException("Invalid User email", HttpStatus.BAD_REQUEST));
         return new SubscriberPojo(subscriber);
+    }
+
+    @Override
+    public int totalSubscriber(Integer id) {
+        Optional<User> user=userRepo.findById(id);
+        int count=0;
+        return 1;
+
+
     }
 }

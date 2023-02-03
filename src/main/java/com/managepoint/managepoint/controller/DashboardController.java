@@ -25,11 +25,12 @@ import java.util.Optional;
 public class DashboardController {
     @Autowired
     UserService userService;
+    User user;
 //    @GetMapping("")
 //    public String getDashboard(Model model){
 //        Optional<User> user = userService.getCurrentUser();
-//        model.addAttribute("profileName", user.get().getName());
-//        return "dashboard";
+//        model.addAttribute("profileName", user.getName());
+//        return "analytics";
 //    }
 
     @GetMapping("/broadcast")
@@ -55,7 +56,7 @@ public class DashboardController {
 
     @GetMapping("/learn")
     public String getBlogs() {
-        return "learn";
+        return "faq";
     }
     @GetMapping("/profile")
     public String getUserProfile (Integer id,Model model, Principal principal) {
