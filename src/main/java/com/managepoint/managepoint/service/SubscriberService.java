@@ -15,6 +15,6 @@ public interface SubscriberService {
     Subscriber fetchById(Integer id);
     void deleteById(Integer id);
     SubscriberPojo findByEmail(String email);
-    int totalSubscriber(Integer id);
+//    int totalSubscriber(Integer id);
 
 }

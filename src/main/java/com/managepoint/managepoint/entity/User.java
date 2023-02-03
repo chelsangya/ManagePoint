@@ -19,26 +19,41 @@ import java.util.Collection;
 @DynamicInsert
 @DynamicUpdate
 @Entity
-@Table(name="users", uniqueConstraints = {
-        @UniqueConstraint(name = "UNIQUE_mp_user_email", columnNames = "email")})
+@Table(name="users",
+        uniqueConstraints = {
+        @UniqueConstraint(name = "UNIQUE_mp_user_email",
+                columnNames = "email")
+})
 public class User implements UserDetails {
     @Id
-    @SequenceGenerator(name = "mp_user_seq_gen", sequenceName = "mp_user_id_seq", allocationSize = 1)
-    @GeneratedValue(generator = "mp_user_seq_gen", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "mp_user_seq_gen",
+            sequenceName = "mp_user_id_seq",
+            allocationSize = 1)
+    @GeneratedValue(generator = "mp_user_seq_gen",
+            strategy = GenerationType.SEQUENCE)
     @Column(name="id")
     private Integer id;
 
-    @Column(name="name",nullable = false)
+    @Column(name="name",
+            nullable = false)
     private String name;
-    @Column(name = "phone",nullable = false,unique = true)
+    @Column(name = "phone",
+            nullable = false,
+            unique = true)
     private String phone;
-    @Column(name = "email",nullable = false,unique = true)
+    @Column(name = "email",
+            nullable = false,
+            unique = true)
     private String email;
-    @Column(name = "address",nullable = false)
+    @Column(name = "address",
+            nullable = false)
     private String address;
-    @Column(name = "password",nullable = false)
+    @Column(name = "password",
+            nullable = false)
     private String password;
-    @Column(name = "image",nullable = true, columnDefinition = "varchar(255) default '/static/images/logo.png'")
+    @Column(name = "image",
+            nullable = true,
+            columnDefinition = "varchar(255) default '/static/images/logo.png'")
     private String image;
 
     @Transient

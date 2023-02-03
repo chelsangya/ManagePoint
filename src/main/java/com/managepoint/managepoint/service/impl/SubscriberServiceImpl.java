@@ -10,6 +10,7 @@ import com.managepoint.managepoint.repo.SubscriberRepo;
 import com.managepoint.managepoint.repo.UserRepo;
 import com.managepoint.managepoint.service.SubscriberService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +39,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     public Subscriber fetchById(Integer id) {
-        return subscriberRepo.findById(id).orElseThrow(()->new RuntimeException("Not Found"));
+        return subscriberRepo.findById(id).orElseThrow(() -> new RuntimeException("Not Found"));
     }
 
     @Override
@@ -48,17 +49,16 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     public SubscriberPojo findByEmail(String email) {
-        Subscriber subscriber= subscriberRepo.findByEmail(email)
+        Subscriber subscriber = subscriberRepo.findByEmail(email)
                 .orElseThrow(() -> new AppException("Invalid User email", HttpStatus.BAD_REQUEST));
         return new SubscriberPojo(subscriber);
     }
 
-    @Override
-    public int totalSubscriber(Integer id) {
-        Optional<User> user=userRepo.findById(id);
-        int count=0;
-        return 1;
-
-
-    }
+//    @Override
+//    public int totalSubscriber(Integer id) {
+//        Optional<User> user = userRepo.findById(id);
+//        int count = 0;
+//        List<Subscriber> subscribers = (List<Subscriber>) subscriberRepo.findAllSub(id);
+//
+//    }
 }

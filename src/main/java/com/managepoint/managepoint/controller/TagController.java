@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TagController{
     private final TagService tagService;
     @GetMapping("/create")
-    public String createtag(Model model) {
+    public String createTag(Model model) {
         model.addAttribute("tag", new TagPojo());
         return "subscriber";
     }
