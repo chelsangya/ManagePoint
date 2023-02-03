@@ -2,6 +2,7 @@ package com.managepoint.managepoint.pojo;
 
 import com.managepoint.managepoint.entity.Tag;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 
 public class TagPojo {
-    @NotEmpty(message="ID cannot be empty")
+    @NotNull(message="ID cannot be empty")
     private Integer id;
     @NotEmpty(message="Name cannot be empty")
     private String name;

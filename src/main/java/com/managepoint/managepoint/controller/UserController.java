@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,13 +29,6 @@ public class UserController extends BaseController {
         return "redirect:/index";
     }
 
-
-//    @GetMapping("user/edit/{id}")
-//    public String editUser(@PathVariable("id") Integer id, Model model){
-//        User user= userService.fetchById(id);
-//        model.addAttribute("user",new UserPojo(user));
-//        return "create";
-//    }
 //    @GetMapping("user/list")
 //    public String getUserList(Model model){
 //        List<User> users=userService.fetchAll();

@@ -3,19 +3,28 @@ package com.managepoint.managepoint.controller;
 import com.managepoint.managepoint.entity.User;
 import com.managepoint.managepoint.pojo.UserPojo;
 import com.managepoint.managepoint.service.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.security.Principal;
 import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/dashboard")
 public class DashboardController {
-//    UserService userService;
+    @Autowired
+    UserService userService;
 //    @GetMapping("")
 //    public String getDashboard(Model model){
 //        Optional<User> user = userService.getCurrentUser();
@@ -41,16 +50,20 @@ public class DashboardController {
 
     @GetMapping("/learn")
     public String getBlogs() {
-
         return "learn";
     }
     @GetMapping("/profile")
-    public String getProfile(Model model){
-        model.addAttribute("user",new UserPojo());
+    public String getUserProfile (Integer id,Model model, Principal principal) {
+        model.addAttribute("update", new UserPojo());
+        model.addAttribute("info",userService.findByEmail(principal.getName()));
         return "accountdetails";
+    }
+    @PostMapping("/profile/update")
+    public String updateUser(@Valid UserPojo userpojo) {
+        userService.save(userpojo);
+        return "redirect:/dashboard";
     }
     @GetMapping("/notification")
     public String getNotification(){return "notification";}
-//    @GetMapping("/createtag")
-//    public String getCreateTag(){return "create_tag";}
+
 }

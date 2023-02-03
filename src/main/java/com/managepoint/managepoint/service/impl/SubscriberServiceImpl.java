@@ -8,10 +8,13 @@ import com.managepoint.managepoint.pojo.SubscriberPojo;
 import com.managepoint.managepoint.pojo.UserPojo;
 import com.managepoint.managepoint.repo.SubscriberRepo;
 import com.managepoint.managepoint.service.SubscriberService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@RequiredArgsConstructor
 public class SubscriberServiceImpl implements SubscriberService {
     SubscriberRepo subscriberRepo;
     @Override

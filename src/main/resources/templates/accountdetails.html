@@ -43,22 +43,21 @@
                 </p>
             </div>
           </div>
-          <form class="signup" th:method="post" th:action="@{/user/save}" th:object="${user}">
+          <form th:method="post" th:action="@{/dashboard/profile/update}" th:object="${user}">
+            <input type="text" hidden="hidden"  name="id"  th:value="${info.id}">
             <input
               type="text"
-              name="fullname"
+              name="name"
               id="fullname"
               placeholder="Edit Full Name"
-              th:field="*{name}"
-              th:value="${user.name}"
+              th:value="${info.getName()}"
             />
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Edit Email Address"
-              th:field="*{email}"
-              th:value="${user.email}"
+              th:value="${info.getEmail()}"
             />
            
               <input
@@ -66,16 +65,14 @@
                 name="address"
                 id="address"
                 placeholder="Edit Address"
-                th:field="*{address}"
-                th:value="${user.address}"
+                th:value="${info.getAddress()}"
               />
               <input
                 type="tel"
                 name="phone"
                 id="phone"
                 placeholder="Edit Phone Number"
-                th:field="*{phone}"
-                th:value="${user.phone}"
+                th:value="${info.getPhone()}"
               />
            
             <input
@@ -83,20 +80,19 @@
               name="password"
               id="password"
               placeholder="Edit Password"
-              th:field="*{password}"
-              th:value="${user.password}"
+              th:value="${info.getPassword()}"
             />
-          </form>
         </div>
 
         <div class="bottom-btn">
-          <button>
+          <button type="reset">
             Cancel
           </button>
-          <button>
+          <button type="submit">
             Save Changes
           </button>
         </div>
+        </form>
       </div>
     </section>
   </body>

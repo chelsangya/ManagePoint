@@ -4,9 +4,12 @@ import com.managepoint.managepoint.entity.Tag;
 import com.managepoint.managepoint.pojo.TagPojo;
 import com.managepoint.managepoint.repo.TagRepo;
 import com.managepoint.managepoint.service.TagService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@RequiredArgsConstructor
 public class TagServiceImpl implements TagService {
     TagRepo tagRepo;
     @Override
