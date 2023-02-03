@@ -43,18 +43,18 @@
                 </p>
             </div>
           </div>
-          <form th:method="post" th:action="@{/dashboard/profile/update}" th:object="${user}">
-            <input type="text" hidden="hidden"  name="id"  th:value="${info.id}">
+          <form th:method="post" th:action="@{/dashboard/profile/update}" th:object="${update}">
+            <input type="text" hidden="hidden"  name="id"  th:value="${info.id}" />
             <input
               type="text"
-              name="name"
+              required name="name"
               id="fullname"
               placeholder="Edit Full Name"
               th:value="${info.getName()}"
             />
             <input
               type="email"
-              name="email"
+              required name="email"
               id="email"
               placeholder="Edit Email Address"
               th:value="${info.getEmail()}"
@@ -62,14 +62,14 @@
            
               <input
                 type="text"
-                name="address"
+                required name="address"
                 id="address"
                 placeholder="Edit Address"
                 th:value="${info.getAddress()}"
               />
               <input
                 type="tel"
-                name="phone"
+                required name="phone"
                 id="phone"
                 placeholder="Edit Phone Number"
                 th:value="${info.getPhone()}"
@@ -77,13 +77,12 @@
            
             <input
               type="password"
-              name="password"
+              required name="password"
               id="password"
               placeholder="Edit Password"
               th:value="${info.getPassword()}"
             />
-        </div>
-
+<!--        </div>-->
         <div class="bottom-btn">
           <button type="reset">
             Cancel
@@ -93,6 +92,7 @@
           </button>
         </div>
         </form>
+        </div>
       </div>
     </section>
   </body>

@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public interface UserService {
     String save(UserPojo userPojo);
+    public String update(UserPojo userPojo);
 
     List<User> fetchAll();
     User fetchById(Integer id);

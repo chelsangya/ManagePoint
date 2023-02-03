@@ -60,7 +60,7 @@ public class DashboardController {
     }
     @PostMapping("/profile/update")
     public String updateUser(@Valid UserPojo userpojo) {
-        userService.save(userpojo);
+        userService.update(userpojo);
         return "redirect:/dashboard";
     }
     @GetMapping("/notification")

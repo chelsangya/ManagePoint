@@ -32,6 +32,20 @@ public class UserServiceImpl implements UserService {
         return "created";
     }
     @Override
+    public String update(UserPojo userPojo) {
+        User user = new User();
+        if(userPojo.getId()!=null){
+            user.setId(userPojo.getId());
+        }
+        user.setEmail(userPojo.getEmail());
+        user.setName(userPojo.getName());
+        user.setAddress(userPojo.getAddress());
+        user.setPhone(userPojo.getPhone());
+        user.setPassword(PasswordEncoderUtil.getInstance().encode(userPojo.getPassword()));
+        userRepo.save(user);
+        return "updated";
+    }
+    @Override
     public List<User> fetchAll() {
         return userRepo.findAll();
     }
@@ -79,4 +93,5 @@ public class UserServiceImpl implements UserService {
         String username = authentication.getName();
         return userRepo.findByName(username);
     }
+
 }
