@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import java.util.List;
 
 public class SubscriberServiceImpl implements SubscriberService {
-    SubscriberRepo subscriberRepo
+    SubscriberRepo subscriberRepo;
     @Override
     public String save(SubscriberPojo subscriberPojo) {
         Subscriber subscriber = new Subscriber();
