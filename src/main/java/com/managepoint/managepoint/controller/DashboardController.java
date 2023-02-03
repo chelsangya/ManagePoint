@@ -37,6 +37,11 @@ public class DashboardController {
 
         return "broadcast";
     }
+    @GetMapping("/broadcast/new")
+    public String newBroadcast() {
+
+        return "newbroadcast";
+    }
 
     @GetMapping("/subscriber")
     public String getGallery() {
