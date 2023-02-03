@@ -7,7 +7,8 @@ import java.util.List;
 
 public interface TagService {
     public void save(TagPojo tagpojo) ;
-    List<io.swagger.v3.oas.annotations.tags.Tag> fetchAll();
+    List<Tag> fetchAll();
     Tag fetchById(Integer id);
+    Tag fetchByName(String name);
     void deleteById(Integer id);
 }

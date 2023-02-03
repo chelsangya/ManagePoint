@@ -15,15 +15,20 @@ public class TagServiceImpl implements TagService {
         tag.setName(tagpojo.getName());
         tagRepo.save(tag);
     }
-
     @Override
-    public List<io.swagger.v3.oas.annotations.tags.Tag> fetchAll() {
+    public List<Tag> fetchAll() {
         return tagRepo.findAll();
     }
 
     @Override
     public Tag fetchById(Integer id) {
         return (Tag) tagRepo.findById(id).orElseThrow(()->new RuntimeException("Not Found"));
+    }
+
+
+    @Override
+    public Tag fetchByName(String name) {
+        return (Tag) tagRepo.findByName(name).orElseThrow(()->new RuntimeException("Not Found"));
     }
 
     @Override
