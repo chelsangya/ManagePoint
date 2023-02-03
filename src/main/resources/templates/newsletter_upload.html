@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsletter Upload</title>
+    <title>
+      Newsletter Upload
+    </title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
       integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    >
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -18,17 +21,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
-    <script src="./navigationbar.js"></script>
-    <link rel="stylesheet" href="./css/newbroadcast.css">
 
-    <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+    <script type="text/javascript" type="text/javascript" th:src="@{/javascript/navigationbar.js}">
+    </script>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/newbroadcast.css}">
+
+    <link th:href="@{/node_modules/froala-editor/css/froala_editor.pkgd.min.css}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@{/node_modules/froala-editor/js/froala_editor.pkgd.min.js}">
+    </script>
 
    
   </head>
   <body>
-    <navigation-bar></navigation-bar>
+  <header th:replace="fragments/navbar :: navbar"
+          th:with="profileName=${name}"/>
 
     <div class="texteditor">
       <div class="container">
@@ -36,14 +42,15 @@
           Upload Thumbnail
         </h1>
         <div class="avatar-upload">
-          <div class="avatar-edit">
+          <div class="avatar-edit">aq15`
             <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
-            <label for="imageUpload"></label>
+            <label for="imageUpload">
+            </label>
           </div>
           <div class="avatar-preview">
             <div
               id="imagePreview"
-              style="background-image: url(./assets/MP_logo.png)"
+              style="background-image: url(/images/MP_logo.png)"
             ></div>
           </div>
         </div>
@@ -52,7 +59,9 @@
         <div id="froala">
 
         </div>
-        <button>Submit</button>
+        <button>
+          Submit
+        </button>
     </div>
 
 
@@ -76,7 +85,8 @@
       readURL(this);
     });
   </script>
-  <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+  <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js">
+  </script>
   <script>
       var editor = new FroalaEditor("#froala");
   </script>

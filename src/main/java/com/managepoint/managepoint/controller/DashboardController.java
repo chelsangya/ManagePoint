@@ -51,6 +51,6 @@ public class DashboardController {
     }
     @GetMapping("/notification")
     public String getNotification(){return "notification";}
-    @GetMapping("/createtag")
-    public String getCreateTag(){return "create_tag";}
+//    @GetMapping("/createtag")
+//    public String getCreateTag(){return "create_tag";}
 }
