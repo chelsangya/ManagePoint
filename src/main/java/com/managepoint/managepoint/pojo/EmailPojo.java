@@ -13,7 +13,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmailPojo {
-    @NotNull(message="ID cannot be empty")
     private Integer id;
     @NotEmpty(message="Title cannot be empty")
     private String title;

@@ -19,24 +19,27 @@ public class Newsletter {
             strategy = GenerationType.SEQUENCE)
     @Column(name="id")
     private Integer id;
-    @Column(name = "author",
-            nullable = false)
-    private Date author;
+//    @Column(name = "author",
+//            nullable = false)
+//    private Date author;
     @Column(name="title")
     private String title;
+
     @Column(name = "content",
             nullable = false)
     private String content;
-    @Column(name = "date",
-            nullable = false)
-    private Date date;
-    @Column(name="image")
-    private String image;
-    @Transient
-    private String thumbnailBase64;
-    @ManyToOne
-    @JoinColumn(name="ne_id",
-            nullable=false)
-    private User user;
+
+//    @Column(name = "date",
+//            nullable = false)
+//    private Date date;
+//    @Column(name="image")
+//    private String image;
+//    @Transient
+//    private String thumbnailBase64;
+
+//    @ManyToOne
+//    @JoinColumn(name="ne_id",
+//            nullable=false)
+//    private User user;
 }
 

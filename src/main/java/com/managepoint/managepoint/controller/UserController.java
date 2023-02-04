@@ -23,10 +23,37 @@ public class UserController extends BaseController {
         return "create";
     }
 
-    @PostMapping("/user/save")
+    @PostMapping("/user/saveuser")
     public String saveUser(@Valid UserPojo userpojo) {
         userService.save(userpojo);
         return "redirect:/index";
+    }
+    @GetMapping("/request-password-reset")
+    public String requestPasswordReset() {
+        return "request_password_reset";
+    }
+
+    @PostMapping("/request-password-reset")
+    public String processPasswordResetRequest(@RequestParam("email") String email, Model model) {
+        userService.processPasswordResetRequest(email);
+        model.addAttribute("message", "A password reset OTP has been sent to your email. Please check your inbox!!!");
+        return "reset_password";
+    }
+
+    @GetMapping("/reset-password")
+    public String resetPassword(@RequestParam("email") String email, Model model) {
+        model.addAttribute("email", email);
+        return "reset_password";
+    }
+
+    @PostMapping("/reset-password")
+    public String processPasswordReset(@RequestParam("email") String email,
+                                       @RequestParam(required=false, name = "OTP") String OTP,
+                                       @RequestParam("password") String password,
+                                       Model model) {
+        userService.resetPassword(email, OTP, password);
+        model.addAttribute("message", "Your password has been reset successfully.");
+        return "redirect:/login";
     }
 
 //    @GetMapping("user/list")

@@ -16,7 +16,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SubscriberPojo {
-    @NotNull(message="ID cannot be empty")
     private Integer id;
     @NotEmpty(message="Name cannot be empty")
     private String name;

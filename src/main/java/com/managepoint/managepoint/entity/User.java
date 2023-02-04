@@ -51,6 +51,8 @@ public class User implements UserDetails {
     @Column(name = "password",
             nullable = false)
     private String password;
+    @Column(name = "OTP")
+    private String OTP;
     @Column(name = "image",
             nullable = true,
             columnDefinition = "varchar(255) default '/static/images/logo.png'")

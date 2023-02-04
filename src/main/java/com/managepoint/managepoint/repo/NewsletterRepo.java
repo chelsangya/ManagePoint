@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface NewsletterRepo extends JpaRepository<Newsletter,Integer> {
-    Optional<Newsletter> findByAuthor(String author);
-    Optional<Newsletter> findByTitle(String title);
+//    Optional<Newsletter> findByAuthor(String author);
+//    Optional<Newsletter> findByTitle(String title);
 }

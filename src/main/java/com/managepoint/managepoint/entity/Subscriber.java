@@ -24,16 +24,5 @@ public class Subscriber {
     @Column(name="email",
             nullable = false)
     private String email;
-    @ManyToOne
-    @JoinColumn ( name ="us_id",
-            nullable = false )
-    private User  user;
-    @ManyToMany
-    @JoinTable(name = "subscriber_tag",
-            joinColumns = @JoinColumn(name = "s_id"),
-            inverseJoinColumns = @JoinColumn(name = "t_id"))
-    private Set<Tag> tags;
 
-    @ManyToMany(mappedBy = "subscribers")
-    private Set<Email> emails;
 }

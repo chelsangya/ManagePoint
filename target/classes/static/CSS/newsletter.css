@@ -1,0 +1,111 @@
+:root {
+  --primary: #121147;
+  --secondary: #ebdfdf;
+}
+.newsletter-container {
+  background-color: var(--primary);
+  min-height: 100vh;
+  color: var(--secondary);
+  padding-bottom: 3%;
+}
+h1 {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 3rem;
+  padding: 2% 0;
+}
+
+.individual-container {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-start;
+  /* border: 5px solid var(--secondary); */
+  border-bottom: 4px solid var(--secondary);
+  margin: 4%;
+  flex-wrap: wrap;
+  padding: 3%;
+}
+.individual-container:hover {
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.35) 5px 5px 20px 5px;
+  background-color: #1e1e4778;
+}
+.individual-container img {
+  width: 20%;
+  height: auto;
+  border-radius: 30px;
+}
+/* text portion */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  margin-right: 20px;
+  width: 70%;
+}
+.section h2 {
+  font-size: 2rem;
+}
+.readmore {
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+
+  transition: max-height 0.15s ease-out;
+}
+
+.readmore.expand {
+  max-height: 5000px !important;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.readmore-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 40px;
+  background-color: var(--secondary);
+  padding: 1%;
+  border-radius: 10px;
+  color: var(--primary);
+  cursor: pointer;
+}
+.readmore-link:hover {
+  background-color: rgba(239, 228, 214, 0.907);
+  border: var(--primary);
+  transition: 0.3s ease-in;
+}
+
+.readmore-link.expand {
+  position: relative;
+  margin-top: 2%;
+}
+
+.readmore-link:after {
+  content: "Read more";
+}
+.readmore-link.expand:after {
+  content: "Read less";
+  width: 30%;
+}
+/* responsive */
+@media (max-width: 600px) {
+  .individual-container img {
+    width: 80%;
+  }
+  .individual-container .section {
+    width: 100%;
+  }
+}

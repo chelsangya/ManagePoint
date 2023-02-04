@@ -11,7 +11,10 @@ import java.util.Optional;
 public interface SubscriberRepo extends JpaRepository<Subscriber,Integer> {
     Optional<Subscriber> findByEmail(String email);
 
-    Optional<Subscriber> findByName(String name);
-    @Query(value = "select * from SUBSCRIBERS where us_id=?1", nativeQuery = true)
-    Subscriber findAllSub(Integer us_id);
+//    Optional<Subscriber> findByName(String name);
+//    @Query(value = "select * from SUBSCRIBERS where us_id=?1", nativeQuery = true)
+//    Subscriber findAllSub(Integer us_id);
+    @Query(value = "select COUNT(*) from subscriber", nativeQuery = true)
+    Long countAllRows();
+
 }

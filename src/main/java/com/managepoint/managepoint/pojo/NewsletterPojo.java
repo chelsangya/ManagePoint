@@ -13,18 +13,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NewsletterPojo {
-    @NotNull(message="ID cannot be empty")
     private Integer id;
     @NotEmpty(message="Title cannot be empty")
     private String title;
     @NotEmpty(message="Content cannot be empty")
     private String content;
-    @NotEmpty(message="Image cannot be empty")
-    private String image;
+
+
     public NewsletterPojo(Newsletter newsletter){
         this.id=newsletter.getId();
         this.title= newsletter.getTitle();
         this.content= newsletter.getContent();
-        this.image=newsletter.getImage();
     }
 }

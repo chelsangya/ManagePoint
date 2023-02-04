@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.concurrent.Flow;
 
 public interface SubscriberService {
-    String save(SubscriberPojo subscriberPojo);
+    SubscriberPojo save(SubscriberPojo subscriberPojo);
     List<Subscriber> fetchAll();
     Subscriber fetchById(Integer id);
     void deleteById(Integer id);

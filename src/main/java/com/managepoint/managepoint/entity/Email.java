@@ -35,9 +35,9 @@ public class Email {
     @JoinColumn(name="ue_id",
             nullable=false)
     private User user;
-    @ManyToMany
-    @JoinTable(name = "email_subscriber",
-            joinColumns = @JoinColumn(name = "e_id"),
-            inverseJoinColumns = @JoinColumn(name = "s_id"))
-    private Set<Subscriber> subscribers;
+//    @ManyToMany
+//    @JoinTable(name = "email_subscriber",
+//            joinColumns = @JoinColumn(name = "e_id"),
+//            inverseJoinColumns = @JoinColumn(name = "s_id"))
+//    private Set<Subscriber> subscribers;
 }

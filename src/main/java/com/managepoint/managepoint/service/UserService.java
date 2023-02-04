@@ -7,7 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
-    String save(UserPojo userPojo);
+    void sendEmail();
+
+    UserPojo save(UserPojo userPojo);
     public String update(UserPojo userPojo);
 
     List<User> fetchAll();
@@ -17,4 +19,8 @@ public interface UserService {
     UserPojo findByEmail(String email);
 
     Optional<User> getCurrentUser();
+
+    void processPasswordResetRequest(String email);
+
+    void resetPassword(String email, String OTP, String password);
 }

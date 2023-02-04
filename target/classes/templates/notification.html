@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification</title>
+    <script  type="text/javascript" th:src="@{/javascript/navigationbar.js}" defer>
+    </script>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/notification.css}" />
+  </head>
+  <body>
+  <header th:replace="fragments/navbar :: navbar"></header>
+    <section id="body">
+      <div class="left">
+        <a th:href="@{~/dashboard/profile}">
+          Account Details
+        </a>
+        <a th:href="@{~/dashboard/notification}">
+          Notifications
+        </a>
+        <a th:href="@{~/dashboard/faq}">
+          Help?
+        </a>
+        <a th:href="@{~/logout}">
+          Logout
+        </a>
+      </div>
+      <div class="right">
+        <div class="upper_part notification-body" >
+          <h1>Notifications Setting</h1>
+          <!-- checkbox added -->
+          <p>
+            <input type="checkbox" name="account Summary" id="" />
+            Account Summary
+            <span>
+              Notify me the summary of recent activities
+            </span>
+          </p>
+          <p>
+            <input type="checkbox" name="account Summary" id="" />
+            Account Summary
+            <span>
+              Notify me the summary of recent activities
+            </span>
+          </p>
+          <p>
+            <input type="checkbox" name="account Summary" id="" />
+            Account Summary
+            <span>
+              Notify me the summary of recent activities
+            </span>
+          </p>
+          <button>
+            Turn off all notifications
+          </button>
+        </div>
+
+        <div class="bottom-btn">
+          <button>
+            Cancel
+          </button>
+          <button>
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
