@@ -38,16 +38,16 @@
         <form th:method="post" th:action="@{/dashboard/saveBroadcast}" th:object="${broadcast}">
             <div class="container1">
                 <input type="text" id="input1" class="recepients" placeholder="Enter Email of Subscriber" required th:field="*{email}"/>
-                <div class="recepients">          <!-- Default checked -->
-                    <div class="rece">
-                        <input type="radio" class="" id="enabledChecked" name="sendd" value="enabled" checked/>
-                        <label class="" for="enabledChecked">Send to particular</label>
-                    </div>
-                    <div class="rece">
-                        <input type="radio" class="" id="disabledChecked" name="sendd" value="disabled"/>
-                        <label class="" for="disabledChecked">Send to all</label>
-                    </div>
-                </div>
+<!--                <div class="recepients">          &lt;!&ndash; Default checked &ndash;&gt;-->
+<!--                    <div class="rece">-->
+<!--                        <input type="radio" class="" id="enabledChecked" name="sendd" value="enabled" checked/>-->
+<!--                        <label class="" for="enabledChecked">Send to particular</label>-->
+<!--                    </div>-->
+<!--                    <div class="rece">-->
+<!--                        <input type="radio" class="" id="disabledChecked" name="sendd" value="disabled"/>-->
+<!--                        <label class="" for="disabledChecked">Send to all</label>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <input type="text" name="subject" placeholder="Subject of the mail" th:field="*{topic}"/>
             <div id="froala">
@@ -69,6 +69,6 @@
 <script>
     var editor = new FroalaEditor("#froala");
 </script>
-<script>    $(document).ready(function () {      $('input[name="sendd"]').on("click", function () {        if ($(this).val() === "enabled") {          $("#input1").removeAttr("disabled").focus();        } else {          $("#input1").attr("disabled", "disabled");        }      });    });  </script>
+<!--<script>    $(document).ready(function () {      $('input[name="sendd"]').on("click", function () {        if ($(this).val() === "enabled") {          $("#input1").removeAttr("disabled").focus();        } else {          $("#input1").attr("disabled", "disabled");        }      });    });  </script>-->
 
 </html>

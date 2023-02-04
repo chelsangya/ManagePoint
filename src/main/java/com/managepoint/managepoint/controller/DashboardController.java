@@ -3,6 +3,7 @@ package com.managepoint.managepoint.controller;
 import com.managepoint.managepoint.entity.*;
 import com.managepoint.managepoint.pojo.*;
 import com.managepoint.managepoint.service.*;
+import com.managepoint.managepoint.service.impl.BroadCastServiceImpl;
 import com.managepoint.managepoint.service.impl.SubscriberServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,7 @@ import java.security.Principal;
 public class DashboardController {
     private  final SubscriberService subscriberService;
     private  final SubscriberServiceImpl subscriberServiceImpl;
+    private final BroadCastServiceImpl broadCastServiceImpl;
     private  final DraftService draftService;
     private final JavaMailSender getJavaMailSender;
 
@@ -52,6 +54,8 @@ public class DashboardController {
 
         Long subs=subscriberServiceImpl.countRows();
         model.addAttribute("subs",subs);
+        Long broadcast = broadCastServiceImpl.countRows();
+        model.addAttribute("broadcast", broadcast);
         return "analytics";
     }
 

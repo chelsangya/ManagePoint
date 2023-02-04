@@ -34,4 +34,8 @@ public class BroadCastServiceImpl implements BroadCastService {
     public void deleteById(Integer id) {
         broadCastRepo.deleteById(id);
     }
+
+    public Long countRows() {
+        return broadCastRepo.countAllRows();
+    }
 }
